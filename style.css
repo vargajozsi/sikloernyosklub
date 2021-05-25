@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 * {
     font-size: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: ;
     box-sizing: border-box;
     margin: 0;
@@ -16,6 +17,7 @@ html {
 
 
 }
+
 .wrapper {
   height: 100vh;
   background-image: url('./media/background.jpg.jpg');
@@ -26,26 +28,37 @@ html {
 
 }
 h1 {
+    font-family: 'Great Vibes', cursive;
     opacity: 0.5;
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: 100;
+    font-stretch: 2em;
     background-color: black;
     color: white;
     text-align: center;
     margin-bottom: 10em;
+    padding: 1em;
+    letter-spacing: 0.1em;
 }
-
+h1::first-letter {
+    font-size: 2em;
+}
 main p {
     opacity: 0.5;
     color: rgb(255, 255, 255);
     font-size: 3em;
     background-color: black;
     padding: 2em;
+    font-family: 'Great Vibes', cursive;
 }
 header {
     position: sticky;
     top: 0;
     background-color: black;
     z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header::after {
@@ -63,14 +76,14 @@ header::after {
     z-index: -1;
     overflow: visible;
 }
-header nav ul {
+ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-content: space-around;
+    align-content: center;
     flex-wrap: wrap;
 }
-li {
+[class="menuelem"]  {
     justify-items: center;
     align-items: center;
     list-style: none;
@@ -79,7 +92,7 @@ li {
     border: solid rgba(255, 255, 255, 15%) 1px;
     border-radius: 0.5em;
 }
-li a {
+[class="menuelem"] a {
     display: block;
     text-decoration: none;
     padding: 0.5em 1em;
@@ -89,6 +102,7 @@ li a {
 }
 li:hover {
     background-color: rgba(255, 255, 255, 30%);
+    backdrop-filter: blur(00.5em);
 
 }
 .neonText {
@@ -102,17 +116,27 @@ li:hover {
       0 0 92px rgb(202, 185, 165),
       0 0 102px rgb(141, 132, 129),
       0 0 151px rgb(78, 161, 182);
+      
   }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    header nav ul {
-        flex-direction: column;}
-        header {
-align-self: center;        }
-
-        
+   li {
+    display: block;
+    width: 100%;
+    text-align: center;       
 }
-
+    wrapper {
+        height: 100%;
+        background-image: url('./media/background.jpg.jpg');
+        background-attachment: local;
+        background-position: initial;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    }
+    header {
+        position: relative ;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {...}
