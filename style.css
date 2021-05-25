@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,700&display=swap');
+* {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html {
+    color: white;
+    background: url(./media/background.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+y{
+}
+
+header::after {
+    box-sizing: border-box;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    content: '';
+    top: 0em;
+    right: 0em;
+    width: 100%;
+    height: 100%;
+    background: #FD991B;
+    clip-path: circle(25% at right 40%);
+    z-index: -1;
+    overflow: visible;
+}
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+li {
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    margin: 2em;
+    align-self: flex-end;
+    border: solid rgba(255, 255, 255, 15%) 1px;
+    border-radius: 0.5em;
+}
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: 2em;
+   color: white; 
+
+}
+li:hover {
+    background-color: rgba(255, 255, 255, 30%);
+
+}
+.neonText {
+    color: rgb(228, 0, 0);
+    text-shadow:
+      0 0 7px rgb(66, 32, 119),
+      0 0 10px rgb(108, 115, 156),
+      0 0 21px rgb(185, 90, 90),
+      0 0 42px rgb(158, 134, 128),
+      0 0 82px rgb(221, 200, 180),
+      0 0 92px rgb(202, 185, 165),
+      0 0 102px rgb(141, 132, 129),
+      0 0 151px rgb(78, 161, 182);
+  }
