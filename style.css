@@ -2,13 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 * {
     font-size: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 200;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
 
 }
+html {
+    font-weight: 100;
+    font-family: 'Source Sans Pro', sans-serif;}
 
 .wrapper {
   height: 100%;
@@ -16,6 +19,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url('./media/background.jpg.jpg');
+
 
 }
 h1 {
@@ -55,13 +60,17 @@ h1::first-letter {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
     font-size: 3em;
+    font-weight: 100;
     padding: 0 2em 2em 2em;
+    font-style: italic;
+}
+span {
+    font-size: 0.82em;
     font-style: italic;
 }
 address {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);   color: rgb(255, 255, 255);
     font-size: 3em;
     width: 100%;
     font-style: italic;
@@ -84,9 +93,9 @@ q {
     width: 100%;
     display: inline-block;
     padding: 0 2em 0 2em;
+    text-align: center;
 }
 .wrapper {
-    background-image: url('./media/background.jpg.jpg');
   
   }
 header {
@@ -115,11 +124,11 @@ header::after {
     overflow: visible;
 }
  ul {
-    display: flex;
+    display: flex ;
     flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
 }
 [class="menuelem"]  {
     justify-items: center;
@@ -157,36 +166,68 @@ li:hover {
       
   }
   footer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgb(255, 255, 255);
+        font-weight: 100;
+        padding: 0 2em 2em 2em;
+        font-style: italic;
+      }
+      footer div{
+          font-size: 1em;
+      }
   
 
 //---------------------------------------------
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-   li {
+@media only screen and (max-width: 300px) {
+ 
+    li {
     display: block;
     width: 100%;
     text-align: center;       
 }
-    wrapper {
-        height: 100%;
-        background-image: url('./media/background.jpg.jpg');
-        background-attachment: local;
-        background-position: initial;
-        background-repeat: no-repeat;
-        background-size: cover;
-      
-    }
+    
     header {
-        position: relative ;
+        position: initial;
 }
-
+.bevezető {
+    font-size: 2em;
+}
+.cimszoveg {
+    font-size: 2em;
+    text-align: center;
+}
+.tartalom {
+    font-size: 2em;
+}
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
+@media only screen and (max-width: 600px) {
+    li {
+        display: block;
+        width: 100%;
+        text-align: center;       
+    }
+    
+        header {
+            position: relative ;
+    }
+    .bevezető {
+        font-size:  2em;
+    }
+    .cimszoveg {
+        font-size: 2em;
+    }
+    .tartalom {
+        font-size: 2em;
+    }
+}
+@media only screen and (max-width: 600px) {...}
+   
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {...}
