@@ -1,17 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,200;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,200;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 * {
-    font-size: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 100;
-
+  font-size: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
 }
 html {
-    font-weight: 100;
-    font-family: 'Source Sans Pro', sans-serif;}
+  font-weight: 100;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+nav {
+  position: relative;
+  top: 0;
+  height: 8em;
+}
+header::after {
+  box-sizing: border-box;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  content: "";
+  top: 0em;
+  right: 0em;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#fff, #fd991b);
+  clip-path: circle(25% at right 40%);
+  z-index: -1;
+  overflow: visible;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+[class="menuelem"] {
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+  margin: 2em;
+  align-self: flex-start;
+  border: solid rgba(255, 255, 255, 15%) 1px;
+  border-radius: 0.5em;
+  background-color: black;
+}
+[class="menuelem"] a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  font-size: 2em;
+  color: white;
+}
+li:hover {
+  background-color: rgba(255, 255, 255, 30%);
+  backdrop-filter: blur(00.5em);
+}
+li a:active {
+  background-color: #fd991b;
+}
+
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+ul li:hover ul,
+ul li ul:hover,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+
+}
 
 .wrapper {
   height: 100%;
@@ -19,221 +97,157 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('./media/background.jpg.jpg');
-
-
+  background-image: url("./media/background.jpg.jpg");
 }
 h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3em;
-    font-weight: 100;
-    font-stretch: 2em;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    margin-bottom: 7em;
-    padding: 1em;
-    letter-spacing: 0.1em;
+  font-family: "Great Vibes", cursive;
+  font-size: 3em;
+  font-weight: 100;
+  font-stretch: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  margin-bottom: 7em;
+  padding: 1em;
+  letter-spacing: 0.1em;
 }
 h1::first-letter {
-    font-size: 2em;
+  font-size: 2em;
 }
 .bevezető {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    font-size: 3em;
-    padding: 2em;
-    font-style: italic;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  padding: 2em;
+  font-style: italic;
 }
 .bevezető::first-letter {
-    font-size: 2em;
+  font-size: 2em;
 }
 .cimszoveg {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    font-size: 3em;
-    margin-top: 10em;
-    padding: 2em;
-    font-style: italic;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  margin-top: 10em;
+  padding: 2em;
+  font-style: italic;
 }
 .tartalom {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    font-size: 3em;
-    font-weight: 100;
-    padding: 0 2em 2em 2em;
-    font-style: italic;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  font-weight: 100;
+  padding: 0 2em 2em 2em;
+  font-style: italic;
 }
 span {
-    font-size: 0.82em;
-    font-style: italic;
+  font-size: 0.82em;
+  font-style: italic;
 }
 address {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);   color: rgb(255, 255, 255);
-    font-size: 3em;
-    width: 100%;
-    font-style: italic;
-    padding: 0 2em 0 2em;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  width: 100%;
+  font-style: italic;
+  padding: 0 2em 0 2em;
 }
 cite {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    font-size: 3em;
-    font-style: italic;
-    padding: 0 2em 0 2em;
-    width: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  font-style: italic;
+  padding: 0 2em 0 2em;
+  width: 100%;
 }
 q {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    font-size: 3em;
-    font-style: italic;
-    width: 100%;
-    display: inline-block;
-    padding: 0 2em 0 2em;
-    text-align: center;
-}
-.wrapper {
-  
-  }
-header {
-    position: sticky;
-    top: 0;
-    background-color: black;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  font-style: italic;
+  width: 100%;
+  display: inline-block;
+  padding: 0 2em 0 2em;
+  text-align: center;
 }
 
-header::after {
-    box-sizing: border-box;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    content: '';
-    top: 0em;
-    right: 0em;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(#fff, #FD991B );
-    clip-path: circle(25% at right 40%);
-    z-index: -1;
-    overflow: visible;
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  padding: 0 2em 2em 2em;
+  font-style: italic;
 }
- ul {
-    display: flex ;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-around;
+footer div {
+  font-size: 1em;
 }
-[class="menuelem"]  {
-    justify-items: center;
-    align-items: center;
-    list-style: none;
-    margin: 2em;
-    align-self: flex-end;
-    border: solid rgba(255, 255, 255, 15%) 1px;
-    border-radius: 0.5em;
-}
-[class="menuelem"] a {
-    display: block;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    font-size: 2em;
-   color: white; 
-
-}
-li:hover {
-    background-color: rgba(255, 255, 255, 30%);
-    backdrop-filter: blur(00.5em);
-
-}
-.neonText {
-    color: rgb(228, 0, 0);
-    text-shadow:
-      0 0 7px rgb(66, 32, 119),
-      0 0 10px rgb(108, 115, 156),
-      0 0 21px rgb(185, 90, 90),
-      0 0 42px rgb(158, 134, 128),
-      0 0 82px rgb(221, 200, 180),
-      0 0 92px rgb(202, 185, 165),
-      0 0 102px rgb(141, 132, 129),
-      0 0 151px rgb(78, 161, 182);
-      
-  }
-  footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: rgb(255, 255, 255);
-        font-weight: 100;
-        padding: 0 2em 2em 2em;
-        font-style: italic;
-      }
-      footer div{
-          font-size: 1em;
-      }
-  
 
 //---------------------------------------------
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 300px) {
- 
+    
     li {
     display: block;
     width: 100%;
-    text-align: center;       
+    text-align: center;
+  }
 }
-    
-    header {
-        position: initial;
-}
-.bevezető {
+  header {
+    position: initial;
+  }
+  .bevezető {
     font-size: 2em;
-}
-.cimszoveg {
+  }
+  .cimszoveg {
     font-size: 2em;
     text-align: center;
-}
-.tartalom {
+  }
+  .tartalom {
     font-size: 2em;
-}
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-    li {
-        display: block;
-        width: 100%;
-        text-align: center;       
-    }
-    
-        header {
-            position: relative ;
-    }
-    .bevezető {
-        font-size:  2em;
-    }
-    .cimszoveg {
-        font-size: 2em;
-    }
-    .tartalom {
-        font-size: 2em;
-    }
+  li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  header {
+    position: relative;
+  }
+  .bevezető {
+    font-size: 2em;
+  }
+  .cimszoveg {
+    font-size: 2em;
+  }
+  .tartalom {
+    font-size: 2em;
+  }
 }
-@media only screen and (max-width: 600px) {...}
-   
+@media only screen and (max-width: 600px) {
+  ...;
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
+@media only screen and (min-width: 768px) {
+  ...;
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
+@media only screen and (min-width: 992px) {
+  ...;
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 1200px) {
+  ...;
+}
