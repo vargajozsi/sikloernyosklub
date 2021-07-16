@@ -15,28 +15,31 @@ html {
 }
 
 header {
-  position: fixed;
+  position: sticky ;
+  width: 100%;
+  height: auto ;
   top: 0;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   z-index: 100;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
 nav {
+  background-color: black;
   position: relative;
   top: 0;
-  height: 8em;
+  height: 10em;
 }
 ul {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: inherit;
   justify-content: center;
   align-content: center;
   text-align: center;
 }
-[class="menuelem"] {
+.menuelem {
   justify-items: center;
   align-items: center;
   list-style: none;
@@ -46,7 +49,7 @@ ul {
   border-radius: 0.5em;
   background-color: black;
 }
-[class="menuelem"] a {
+.menuelem a {
   display: block;
   text-decoration: none;
   padding: 0.5em 1em;
@@ -95,6 +98,13 @@ h1 {
   margin-bottom: 7em;
   padding: 1em;
   letter-spacing: 0.1em;
+  animation-name: h1animation;
+  animation-duration: 4s;
+}
+@keyframes h1animation {
+  from {color: rgb(0, 0, 0);}
+  to { color: rgb(253, 253, 253);}
+  
 }
 h1::first-letter {
   font-size: 2em;
@@ -183,9 +193,6 @@ footer div {
     text-align: center;
   }
 }
-  header {
-    position: initial;
-  }
   .bevezető {
     font-size: 2em;
   }
@@ -233,6 +240,12 @@ footer div {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  ...;
+@media only screen and (max-width: 1024px) {
+ul {
+  flex-wrap: wrap;
+  
+} 
+nav {
+  height: auto;
+} 
 }
