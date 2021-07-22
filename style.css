@@ -26,42 +26,34 @@ header {
   align-items: flex-start;
 }
 nav {
-  background-color: black;
-  position: relative;
-  top: 0;
+  display: block;
   height: 10em;
 
 }
+
 ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: inherit;
-  justify-content: center;
-  align-content: center;
   text-align: center;
-
-
 }
-.menuelem {
-  justify-items: center;
-  align-items: center;
+
+.fomenu:hover {
+  color: rgb(255, 255, 255);
+}
+ .menuelem {
+  vertical-align: text-top;
   list-style: none;
-  margin: 2em;
-  align-self: flex-start;
-  border: solid rgba(252, 250, 250, 0.15) 1px;
-  border-radius: 0.5em;
-  background-color: black;
   transition: all 1s ;
-
-}
-.menuelem a {
-  display: block;
-  width: 9em;
+  margin: 2em;
+} 
+li > a {
+  width: auto;
   text-decoration: none;
   padding: 0.5em 1em;
   font-size: 2em;
   color: white;
 
+}
+nav > ul > li {
+  display: inline-block;
 }
 
 li:hover {
@@ -69,12 +61,13 @@ li:hover {
   backdrop-filter: blur(00.5em);
 }
 li a:hover {
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 600;
 } 
 li a:active {
-  background-color: #fd991b;
+  background-color: #F1BA34;
   color: black;
+  overflow: hidden;
 }
 
 .dropdown {
@@ -89,13 +82,8 @@ ul li ul:focus {
   visibility: visible;
   opacity: 1;
   display: block;
-  
+}
 
-}
-.fomenu:hover {
-  color: rgb(255, 255, 255);
-  width: auto;
-}
 
 .wrapper {
   height: 100%;
