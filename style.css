@@ -219,12 +219,20 @@ footer div {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 300px) {
     
-    li {
-    display: block;
+  nav > ul > li {
+    display: inline-block;
+  }
+  header, nav, ul, li,  a, .fomenu
+ {
     width: 100%;
+    display: block;
     text-align: center;
   }
-}
+  .menuelem {
+    margin: 0px !important;
+    padding: 2em;
+  }
+  
   .bevezető {
     font-size: 2em;
   }
@@ -242,6 +250,10 @@ footer div {
     display: block;
     width: 100%;
     text-align: center;
+  }
+  .menuelem {
+    margin: 0px !important;
+    padding: 2em;
   }
 
   header {
