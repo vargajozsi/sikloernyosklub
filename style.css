@@ -12,6 +12,7 @@
 html {
   font-weight: 100;
   font-family: "Source Sans Pro", sans-serif;
+  background-color: black;
 }
 
 header {
@@ -19,8 +20,8 @@ header {
   width: 100%;
   height: auto ;
   top: 0;
-  background-color: rgb(0, 0, 0);
   z-index: 100;
+  background-color: black;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -44,6 +45,15 @@ ul {
   transition: all 1s ;
   margin: 2em;
 } 
+a {
+  cursor: grab;
+  color:  #F1BA34;
+  font-size: inherit;
+  font-weight: 100;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  text-decoration: none;
+}
 li > a {
   width: auto;
   text-decoration: none;
@@ -101,13 +111,23 @@ h1 {
   font-stretch: 2em;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-bottom: 7em;
   padding: 1em;
   letter-spacing: 0.1em;
   animation-name: h1animation;
   animation-duration: 4s;
   animation-fill-mode: forwards;
   visibility: hidden;
+}
+h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  font-stretch: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 7em;
+  padding: 1em;
 }
 @keyframes h1animation {
   from { font-size: 0px; color: rgb(0, 0, 0);}
@@ -204,7 +224,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(185, 185, 185, 0.5);
   color: rgb(255, 255, 255);
   font-weight: 100;
   padding: 0 2em 2em 2em;
