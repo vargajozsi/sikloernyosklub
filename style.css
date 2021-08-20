@@ -29,7 +29,6 @@ header {
 nav {
   display: block;
   height: 10em;
-
 }
 
 ul {
@@ -114,7 +113,7 @@ h1 {
   padding: 1em;
   letter-spacing: 0.1em;
   animation-name: h1animation;
-  animation-duration: 4s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -126,7 +125,6 @@ h2 {
   font-stretch: 2em;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-bottom: 7em;
   padding: 1em;
 }
 @keyframes h1animation {
@@ -135,6 +133,10 @@ h2 {
 }
 h1::first-letter {
   font-size: 2em;
+}
+p {
+  color: white;
+  text-align: center;
 }
 i[forditas] {
   position: relative;
@@ -162,6 +164,7 @@ i[forditas]:hover::after {
   font-size: 3em;
   padding: 2em;
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
 }
 .bevezető::first-letter {
   font-size: 2em;
@@ -183,6 +186,10 @@ i[forditas]:hover::after {
   font-family: 'Source Sans Pro', sans-serif;
   transition: background-color 1s;
   line-height: 1.6em;
+
+}
+.tartalom::first-letter {
+  font-size: 2em;
 }
 .tartalom:hover {
   background-color: black;
@@ -233,6 +240,93 @@ footer {
 footer div {
   font-size: 1em;
 }
+
+/*the beginn of starthelyek specifed style elements*/
+.container {
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.container .colums {
+  width: 33.3%;
+  height: 100%;
+  float: left;
+  border-right: solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+.container .colums:last-child {
+  border-right: none;
+}
+.container .colums .content {
+  position: relative;
+  height: 100%;
+}
+.container .colums .content h1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: solid rgba(255, 255, 255, 0.5);
+  border-bottom: solid rgba(255, 255, 255, 0.5);
+}
+.container .colums .content .box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(100%);
+  padding: 40px;
+  background: rgba(0, 0, 0, 1);
+  transition: 2s;
+  opacity: 0; 
+}
+
+.container .colums.active .content .box {
+  opacity: 1;
+  transform: translateY(-50%);
+
+}
+.container .colums .content .box h2 {
+  font-size: 2.5em;
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+.container .colums .content .box p {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+.container .colums.active .bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: -1;
+
+}
+.container .colums.active .bg.bg1 {
+  background: url(media/bg1.jpg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  transition: 00.5s;
+}
+.container .colums.active .bg.bg2 {
+  background: url(media/bg2.jpg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  transition: 00.5s;
+}
+.container .colums.active .bg.bg3 {
+  background: url(media/bg3.jpg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  transition: 00.5s;
+}
+/*the end of starthelyek specifed style elements*/
 
 //---------------------------------------------
 
@@ -289,9 +383,8 @@ footer div {
     font-size: 2em;
   }
 }
-@media only screen and (max-width: 600px) {
-  ...;
-}
+
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
