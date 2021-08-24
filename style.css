@@ -22,15 +22,13 @@ header {
   top: 0;
   z-index: 100;
   background-color: black;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  display: block;
+  text-align: center;
 }
 nav {
   display: block;
   height: 10em;
 }
-
 ul {
   text-align: center;
 }
@@ -199,7 +197,7 @@ i[forditas]:hover::after {
   background-color: black;
 }
 span {
-  font-size: 0.82em;
+  font-size: 0.6em;
   font-family: "Source Sans Pro", sans-serif;
 }
 address {
@@ -334,33 +332,25 @@ footer div {
 //---------------------------------------------
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 300px) {
-  nav > ul > li {
-    display: inline-block;
-  }
-  header,
-  nav,
-  ul,
-  li,
-  a,
-  .fomenu {
+@media screen and (max-width: 600px) {
+  header {
+    position: initial;
+    display: none;
     width: 100%;
-    display: block;
-    text-align: center;
   }
-  .menuelem {
-    margin: 0px !important;
-    padding: 2em;
+  nav {
+    display: none;
+    height: auto;
+    width: 100%;
   }
-
-  .bevezető {
+  h1 {
     font-size: 2em;
+    color: rgb(255, 255, 255);
+    font-stretch: 0.6em;
+    padding: 0.5em;
+    letter-spacing: 0.1em;
+    visibility: visible;
   }
-  .cimszoveg {
-    font-size: 2em;
-    text-align: center;
+  ul {
+    display: none;
   }
-  .tartalom {
-    font-size: 2em;
-  }
-}
