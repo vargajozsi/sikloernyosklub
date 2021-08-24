@@ -63,10 +63,12 @@ header {
 .submenu {
   z-index: 50;
   position: absolute;
-  background: var(--black-elements);
+  left: 0;
+  background-color: var(--black-elements);
   white-space: nowrap;
   padding: 1.5em 0;
 }
+
 
 .submenu > li > a {
   
