@@ -1,95 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-* {
-  font-size: 10px;
+
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 100;
+  --linkelement: #ffd82a;
+  font-size: 10px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-html {
-  font-weight: 100;
-  font-family: "Source Sans Pro", sans-serif;
-  background-color: black;
-}
-
-header {
-  position: sticky;
-  width: 100%;
-  height: auto;
-  top: 0;
-  z-index: 100;
-  background-color: black;
-  display: block;
-  text-align: center;
-}
 nav {
-  display: block;
-  height: 10em;
-}
-ul {
-  text-align: center;
+  width: 100%;
+  border-bottom: solid 1px rgb(0, 0, 0);
+  margin-bottom: 10em;
 }
 
-.fomenu:hover {
-  color: rgb(255, 255, 255);
-}
-.menuelem {
-  vertical-align: text-top;
-  list-style: none;
-  transition: all 1s;
-  margin: 2em;
-}
-a {
-  cursor: grab;
-  color: #f1ba34;
-  font-size: inherit;
-  font-weight: 100;
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 1.6em;
-  text-decoration: none;
-}
-li > a {
-  width: auto;
-  text-decoration: none;
-  padding: 0.5em 1em;
-  font-size: 2em;
-  color: white;
-}
-nav > ul > li {
-  display: inline-block;
-}
-
-li:hover {
-  background-color: rgba(255, 255, 255, 10%);
-  backdrop-filter: blur(00.5em);
-}
-li a:hover {
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-}
-li a:active {
-  background-color: #f1ba34;
-  color: black;
-  overflow: hidden;
-}
-
-.dropdown {
-  visibility: hidden;
-  opacity: 0;
+label {
   display: none;
 }
 
-ul li:hover ul,
-ul li ul:hover,
-ul li ul:focus {
-  visibility: visible;
-  opacity: 1;
-  display: block;
+#toggle {
+  display: none;
 }
 
+
+/* beginn of main */
 .wrapper {
   height: 100%;
   background-attachment: fixed;
@@ -329,28 +267,14 @@ footer div {
 }
 /*the end of starthelyek specifed style elements*/
 
-//---------------------------------------------
 
 /* Extra small devices (phones, 600px and down) */
-@media screen and (max-width: 600px) {
-  header {
-    position: initial;
-    display: none;
-    width: 100%;
-  }
-  nav {
-    display: none;
-    height: auto;
-    width: 100%;
-  }
-  h1 {
-    font-size: 2em;
-    color: rgb(255, 255, 255);
-    font-stretch: 0.6em;
-    padding: 0.5em;
-    letter-spacing: 0.1em;
-    visibility: visible;
-  }
-  ul {
-    display: none;
-  }
+@media only screen and (max-width: 600px) {
+label {
+  display: block;
+  cursor: pointer;
+}
+.menu {
+  text-align: center;
+  width: 100%;
+}
