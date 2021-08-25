@@ -45,6 +45,12 @@ header {
   text-decoration: none;
   text-transform: uppercase;
 }
+.sikloernyosklub-logo img {
+  padding-top: 0.5em;
+  padding-bottom: 00.5em;
+  width: auto;
+  height: calc(5rem + 3vw);
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -85,7 +91,7 @@ header {
 
   /* hide submenu */
   opacity: 0;
-  transform: scale(0);
+  transform: scaleY(0);
   transform-origin: top center;  
 
 }
@@ -116,7 +122,7 @@ header {
 /* unhide submenus */
 .menu > li:hover > a + .submenu {
   opacity: 1;
-  transform: scale(1);
+  transform: scaleY(1);
   transition: 0.5s;
 }
  
