@@ -46,67 +46,90 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul aria-label="menü">
-          <li class="menuelem">
-            <a class="fomenu" href="index.html">Siklóernyőzés</a>
-            <ul class="dropdown" aria-label="almenü">
-              <li class="menuelem"><a href="#">Siklóernyőzésről</a></li>
-              <li class="menuelem">
-                <a href="#">Siklóernyős felszerelések</a>
-              </li>
-              <li class="menuelem"><a href="#">Siklóernyős tanfolyamok</a></li>
-              <li class="menuelem"><a href="#">Siklóernyős klubok</a></li>
-              <li class="menuelem"><a href="#">Siklóernyős oktatók</a></li>
-              <li class="menuelem"><a href="#">Tananyagok</a></li>
-              <li class="menuelem"><a href="#">K.S.P.</a></li>
-            </ul>
-          </li>
-          <li class="menuelem">
-            <a class="fomenu" href="starthelyek.html">Starthelyek</a>
-            <ul class="dropdown" aria-label="almenü">
-              <li class="menuelem">
-                <a href="#">Magyarországi starthelyek</a>
-              </li>
-              <li class="menuelem"><a href="#">Európai starthelyek</a></li>
-              <li class="menuelem"><a href="#">Egyéb Starthelyek</a></li>
-            </ul>
-          </li>
-          <li class="menuelem">
-            <a class="fomenu" href="#">Tandemrepülés</a>
-            <ul class="dropdown" aria-label="almenü">
-              <li class="menuelem">
-                <a href="#">Tandemrepülésről általában</a>
-              </li>
-              <li class="menuelem"><a href="#">Tandempilóták</a></li>
-              <li class="menuelem">
-                <a href="#">Jelentkezés tandemrepülésre</a>
-              </li>
-              <li class="menuelem"><a href="#">Ajándékutalvány</a></li>
-            </ul>
-          </li>
-          <li class="menuelem">
-            <a class="fomenu" href="#">Siklóernyős hírek</a>
-          </li>
-          <li class="menuelem">
-            <a class="fomenu" href="#">Túrák</a>
-            <ul class="dropdown" aria-label="almenü">
-              <li class="menuelem"><a href="#">Túra leírások</a></li>
-              <li class="menuelem"><a href="#">Túranaptár</a></li>
-            </ul>
-          </li>
-          <li class="menuelem">
-            <a class="fomenu" href="#">Hasznos</a>
-            <ul class="dropdown" aria-label="almenü">
-              <li class="menuelem"><a href="#">Légterek</a></li>
-              <li class="menuelem"><a href="#">Meteorológia</a></li>
-              <li class="menuelem"><a href="#">Gyártók</a></li>
-              <li class="menuelem"><a href="#">Szervezetek</a></li>
-              <li class="menuelem"><a href="#">Reporvos</a></li>
-              <li class="menuelem"><a href="#">Xcontest</a></li>
-            </ul>
-          </li>
-        </ul>
+      <nav class="navbar">
+        <div class="branding">
+          <h2>
+            <a href="#" class="sikloernyosklub-logo">Sikloernyosklublogo</a>
+          </h2>
+        </div>
+        <div>
+          <ul class="menu">
+            <li class="has-dropdown">
+              <a class="menu-link" href="index.html"
+                >Siklóernyőzés<span class="arrow">˅</span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#" class="menu-link">Siklóernyőzésről</a></li>
+                <li>
+                  <a href="#" class="menu-link">Siklóernyős Felszerelések</a>
+                </li>
+                <li>
+                  <a href="#" class="menu-link">Siklóernyős Tanfolyamok</a>
+                </li>
+                <li><a href="#" class="menu-link">Siklóernyős Klubok</a></li>
+                <li><a href="#" class="menu-link">Siklóernyős Oktatók</a></li>
+                <li><a href="#" class="menu-link">Tananyagok</a></li>
+                <li><a href="#" class="menu-link">K.S.P.</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="starthelyek.html" class="menu-link"
+                >Starthelyek<span class="arrow">˅</span></a
+              >
+              <ul class="submenu">
+                <li>
+                  <a href="googleterkepstarthelyek.html" class="menu-link"
+                    >Magyarországi Starthelyek</a
+                  >
+                </li>
+                <li><a href="#" class="menu-link">Európai Starthelyek</a></li>
+                <li><a href="#" class="menu-link">Egyéb Starthelyek</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#" class="menu-link"
+                >Tandemrepülés<span class="arrow">˅</span></a
+              >
+              <ul class="submenu">
+                <li>
+                  <a href="#" class="menu-link" class="menu-link"
+                    >Tandemrepülésről Általában</a
+                  >
+                </li>
+                <li><a href="#" class="menu-link">Tandempilóták</a></li>
+                <li>
+                  <a href="#" class="menu-link">Jelentkezés Tandemrepülésre</a>
+                </li>
+                <li><a href="#" class="menu-link">Ajándékutalvány</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#" class="menu-link"
+                >Hasznos<span class="arrow">˅</span></a
+              >
+              <ul class="submenu">
+                <li><a href="#" class="menu-link">Meteorológia</a></li>
+                <li><a href="#" class="menu-link">Gyártók</a></li>
+                <li><a href="#" class="menu-link">Szervezetek</a></li>
+                <li><a href="#" class="menu-link">Reporvos</a></li>
+                <li><a href="#" class="menu-link">Xcontest</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#" class="menu-link"
+                >Túrák<span class="arrow">˅</span></a
+              >
+              <ul class="submenu">
+                <li><a href="#" class="menu-link">Túra Leírások</a></li>
+                <li><a href="#" class="menu-link">Túranaptár</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="menu-link">Hírek</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main style="text-align: center;">

@@ -6,11 +6,12 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   font-family: "Source Sans Pro", sans-serif;
-  --linkelement: #F1BA34;
+  
+  --linkelement: #F7BB3C; 
   --black-elements: black;
   --white-elements: #fff;
   --attetszo-sotet: rgba(0, 0, 0, 0.5);
-
+  
 }
 
 *, *:before, *:after {
@@ -18,7 +19,12 @@ html {
   margin: 0;
   padding: 0;
 }
-
+body {
+  background-color: rgb(0, 0, 0);
+  background-image: url(media/background.jpg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 header nav h2 {
   text-align: left;
   margin: 0;
@@ -27,9 +33,9 @@ header nav h2 {
 }
 
 header {
-  z-index: 100;
+  z-index: 5;
   background: var(--black-elements);
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   position: sticky;
   top: 0;
 }
@@ -43,6 +49,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 10rem;
 }
 .menu {
   display: flex;
@@ -115,6 +122,7 @@ header {
  
 
 /* beginn of main */
+
 .wrapper {
   height: 100%;
   background-attachment: fixed;
@@ -166,9 +174,7 @@ p {
   color: white;
   text-align: center;
 }
-i {
-  z-index: 0;
-}
+
 i[forditas] {
   position: relative;
 }
@@ -240,7 +246,7 @@ address {
 }
 
 q {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: rgb(255, 255, 255);
   font-size: 3rem;
   font-family: "Source Sans Pro", sans-serif;
@@ -293,7 +299,10 @@ footer div {
   background: rgba(0, 0, 0, 0.5);
   border-top: solid rgba(255, 255, 255, 0.5);
   border-bottom: solid rgba(255, 255, 255, 0.5);
+
 }
+
+
 .container .colums .content .box {
   position: absolute;
   top: 50%;
@@ -308,6 +317,7 @@ footer div {
   opacity: 1;
   transform: translateY(-50%);
 }
+
 .container .colums .content .box h2 {
   font-size: 2.5em;
   background-color: rgba(0, 0, 0, 0.1);
@@ -348,6 +358,15 @@ footer div {
   background-position: center;
   transition: 00.5s;
 }
+.container div div  h1  a  {
+  color: var(--linkelement);
+  text-decoration: none;
+}
+.container div div  h2  a  {
+  color: var(--linkelement);
+  text-decoration: none;
+}
+
 /*the end of starthelyek specifed style elements*/
 
 
