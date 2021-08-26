@@ -68,7 +68,6 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-
 }
 .menuhider > .menuhiderarrow {
   position: absolute;
@@ -80,7 +79,6 @@ header {
   border-right: 1px solid var(--white-elements);
   color: var(--white-elements);
   transform: rotate(135deg);
-  
 }
 .menu {
   display: flex;
@@ -411,7 +409,7 @@ footer div {
   header {
     position: relative;
   }
-  
+
   .menu {
     visibility: hidden;
     flex-flow: column;
@@ -420,6 +418,7 @@ footer div {
     left: 0;
     top: -10.4em;
     height: auto;
+    width: 100%;
   }
   .submenu {
     border: var(--linkelement) solid 1px;
@@ -432,41 +431,36 @@ footer div {
   header > nav > div:nth-child(2) > ul > div {
     visibility: visible;
   }
-   .menu:active, .menu:hover{
-    width: 100%; 
+  .menu:active,
+  .menu:hover {
     top: calc(7.5rem + 3vw);
-   visibility: visible;
+    visibility: visible;
   }
 
-  .menu > li > a, .arrow {
+  .menu > li > a,
+  .arrow {
     font-size: 1.5rem;
   }
-  .submenu {
 
-  }
   .submenu > li > a {
     font-size: 1.5rem;
   }
   .menuhider {
     display: block;
-    width: 100vw;
+    width: 100%;
   }
-  .menuhider > .menuhiderarrow {
-    
-  }
-  
 }
 @media only screen and (max-width: 600px) {
   .menuhider {
-    display: none;
-    
+    /* display: none; */
   }
 
   .menu {
+    visibility: visible;
     display: block;
     height: 100vh;
     right: 0;
-
+    top: calc(7.5rem + 3vw);
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top center;
@@ -477,7 +471,21 @@ footer div {
     top: 0;
     padding-left: 1.5em;
     border-left: 0.12em dotted var(--linkelement);
+
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    left: initial;
+    top: 0;
+    padding-left: 1.5em;
+    width: initial;
+    margin-left: 1rem;
   }
+
+  .menu:active,
+  .menu:hover {
+  }
+
   .menu > li,
   .submenu > li {
     padding-top: 0.8em;
