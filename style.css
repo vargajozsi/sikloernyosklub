@@ -25,6 +25,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 header nav h2 {
   text-align: left;
   margin: 0;
@@ -35,7 +36,7 @@ header nav h2 {
 header {
   z-index: 5;
   background: var(--black-elements);
-  padding-left: 2rem;
+  padding: 0 2rem;
   position: sticky;
   top: 0;
 }
@@ -71,7 +72,7 @@ header {
   color: var(--white-elements);
   align-items: baseline;
   padding: 0.5em 1em;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
 }
 
 /*styling submenu*/
@@ -150,7 +151,7 @@ h1 {
   padding: 1em;
   letter-spacing: 0.1em;
   animation-name: h1animation;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -382,6 +383,92 @@ footer div {
   }
 }
 
-@media only screen and (max-width: 900px) {
-  
+@media only screen and (max-width: 800px) {
+  header {
+    position: relative;
+  }
+  .menu {
+    flex-flow: column;
+    position: absolute;
+    background: var(--black-elements);
+    left: 0;
+    top: calc(7.5rem + 3vw);
+    height: auto;
+  }
+  .menu > li > a {
+    font-size: 1.5rem;
+  }
+  .submenu {
+    left: 0;
+    top: 0;
+    padding-left: 1.5em;
+  }
+  .submenu > li > a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menu {
+    height: 100vh;
+    right: 0;
+
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center; 
+    transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms, 100ms opacity ease-in-out;
+  }
+  .submenu {
+    top: 0;
+    padding-left: 1.5em;
+    border-left: 0.12em dotted var(--linkelement);
+  }
+  .menu > li:hover > a + .submenu {
+    position: relative;
+  }
+  .hamburger {
+    width: 2em;
+    height: 0.25em;
+    display: block;
+    background: var(--linkelement);
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s transform ease-in-out;
+  }
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    background: inherit;
+    transition: 0.2s transform ease-in-out;
+  }
+  .hamburger::before {
+    bottom: 0.65em;
+  }
+  .hamburger::after {
+    top: 0.65em;
+  }
+  .close::before, .close::after {
+    top: 0;
+    transition: 0.2s transform ease-in-out;
+  }
+  .close {
+    transform: rotate(45deg);
+  } 
+  .close::before {
+    display: none;
+  }
+  .close::after {
+    transform: rotate(-90deg);
+  }
+  /*unhide hamburgermenu*/
+  input[type="checkbox"]:checked + .menu {
+    z-index: 500;
+    position: absolute;
+    opacity: 1;
+    transform: scaleY(1);
+
+  }
 }
