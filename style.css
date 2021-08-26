@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-
 html {
   box-sizing: border-box;
   font-size: 10px;
   font-family: "Source Sans Pro", sans-serif;
-  
-  --linkelement: #F7BB3C; 
+
+  --linkelement: #f7bb3c;
   --black-elements: black;
   --white-elements: #fff;
   --attetszo-sotet: rgba(0, 0, 0, 0.5);
-  
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -63,7 +63,7 @@ header {
 }
 .menu li {
   list-style: none;
-} 
+}
 
 .menu li a {
   display: block;
@@ -87,27 +87,26 @@ header {
   white-space: nowrap;
   padding: 1.5em 0;
   border-radius: 5px;
-  box-shadow:20px 20px 20px rgb(0, 0, 0); 
+  box-shadow: 20px 20px 20px rgb(0, 0, 0);
 
   /* hide submenu */
   opacity: 0;
   transform: scaleY(0);
-  transform-origin: top center;  
-
+  transform-origin: top center;
 }
 
-
 .submenu > li > a {
-  
   padding: 0.5em 1.5em;
 }
 
-.menu > li:hover> a, .submenu > li:hover > a {
+.menu > li:hover > a,
+.submenu > li:hover > a {
   background-color: hsla(0, 0%, 100%, 0.07);
   color: var(--linkelement);
 }
-,menu > li:hover > a {
-  background-color:  hsla(0, 0%, 100%, 0.2);
+,
+menu > li:hover > a {
+  background-color: hsla(0, 0%, 100%, 0.2);
 }
 /* Arrow for submenu */
 .arrow {
@@ -116,8 +115,12 @@ header {
   padding-left: 0.7rem;
   vertical-align: text-bottom;
   font-weight: 700;
+  transition: font-size 100ms ease-in-out;
 }
-
+/* Arrow animating*/
+.menu > li:hover > a > .arrow {
+  font-size: 0.4em;
+}
 
 /* unhide submenus */
 .menu > li:hover > a + .submenu {
@@ -125,7 +128,6 @@ header {
   transform: scaleY(1);
   transition: 0.5s;
 }
- 
 
 /* beginn of main */
 
@@ -141,7 +143,7 @@ h1 {
   font-family: "Great Vibes", cursive;
   font-weight: 100;
   font-size: 3em;
-  color: var(--white-elements) ;
+  color: var(--white-elements);
   font-stretch: 2em;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -305,9 +307,7 @@ footer div {
   background: rgba(0, 0, 0, 0.5);
   border-top: solid rgba(255, 255, 255, 0.5);
   border-bottom: solid rgba(255, 255, 255, 0.5);
-
 }
-
 
 .container .colums .content .box {
   position: absolute;
@@ -364,25 +364,24 @@ footer div {
   background-position: center;
   transition: 00.5s;
 }
-.container div div  h1  a  {
+.container div div h1 a {
   color: var(--linkelement);
   text-decoration: none;
 }
-.container div div  h2  a  {
+.container div div h2 a {
   color: var(--linkelement);
   text-decoration: none;
 }
 
 /*the end of starthelyek specifed style elements*/
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-label {
-  display: block;
-  cursor: pointer;
+/* Responsives for smaller devices*/
+@media only screen and (max-width: 900px) {
+  .submenu {
+    left: -100%;
+  }
 }
-.menu {
-  text-align: center;
-  width: 100%;
+
+@media only screen and (max-width: 900px) {
+  
 }
