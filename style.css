@@ -170,7 +170,7 @@ h1 {
   font-stretch: 2em;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding: 1em;
+  padding: 0.5rem;
   letter-spacing: 0.1em;
   animation-name: h1animation;
   animation-duration: 1s;
@@ -338,7 +338,7 @@ footer div {
   position: absolute;
   top: 50%;
   transform: translateY(100%);
-  padding: 40px;
+  padding: 2rem;
   background: rgba(0, 0, 0, 1);
   transition: 2s;
   opacity: -1;
@@ -350,11 +350,11 @@ footer div {
 }
 
 .container .colums .content .box h2 {
-  clamp(0.5rem, 1vw, .7rem );
+  font-size:  clamp(1.5rem, 2vw, 3rem );
   background-color: rgba(0, 0, 0, 0.1);
 }
 .container .colums:hover .content .box p {
-  font-size: clamp(0.7rem, 3vw, 2rem );
+  font-size: clamp(1rem, 2vw, 3rem );
   line-height: 1.5em;
   opacity: 1;
 }
@@ -391,7 +391,7 @@ footer div {
 }
 .container div div h1 a {
   color: var(--linkelement);
-  font-size: clamp(0.7rem, 3vw, 3rem );
+  font-size: clamp(1rem, 4vw, 5rem );
   text-decoration: none;
 }
 .container div div h2 a {
@@ -457,11 +457,18 @@ footer div {
 
 /*the beginn of starthelyek specifed style elements for under 800px*/
 .container {
-  height: 100vh;
+  height: 85vh;
 }
+
 
 container div div h1 a {
   font-size: clamp(0.7rem, 3vw, 2rem );
+}
+
+
+.container .colums:hover .content .box p {
+  font-size: clamp(1rem, 2vw, 2rem );
+  line-height: 1em;
 }
 /*the end of starthelyek specifed style elements for under 800px*/
 
@@ -554,10 +561,33 @@ container div div h1 a {
     transform: scaleY(1);
   }
 /*the beginn of starthelyek specifed style elements for under 600px*/
-.container {
-  height: 100vh;
+.box {
+  z-index: 100;
+}
+body > main > div > div:nth-child(1) > div.content > div {
+  left: 22vw;
+
+}
+body > main > div > div:nth-child(2) > div.content > div{
+  left: -11vw;
 }
 
+body > main > div > div:nth-child(3) > div.content > div{
+
+  left: -46vw;
+  width: fit-content;
+
+}
+.container {
+  height: 85vh;
+}
+
+
+
+.container .colums:hover .content .box p {
+  font-size: clamp(1.3rem, 3vw, 2rem );
+  line-height: 1em;
+}
 
 /*the end of starthelyek specifed style elements for under 600px*/
   
