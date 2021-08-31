@@ -321,12 +321,14 @@ footer div {
 .container .colums .content {
   position: relative;
   height: 100%;
+  max-width: 100%;
 }
 .container .colums .content h1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  min-height: 25rem;
   background: rgba(0, 0, 0, 0.5);
   border-top: solid rgba(255, 255, 255, 0.5);
   border-bottom: solid rgba(255, 255, 255, 0.5);
@@ -348,11 +350,11 @@ footer div {
 }
 
 .container .colums .content .box h2 {
-  font-size: 2.5em;
+  clamp(0.5rem, 1vw, .7rem );
   background-color: rgba(0, 0, 0, 0.1);
 }
 .container .colums:hover .content .box p {
-  font-size: 2em;
+  font-size: clamp(0.7rem, 3vw, 2rem );
   line-height: 1.5em;
   opacity: 1;
 }
@@ -389,6 +391,7 @@ footer div {
 }
 .container div div h1 a {
   color: var(--linkelement);
+  font-size: clamp(0.7rem, 3vw, 3rem );
   text-decoration: none;
 }
 .container div div h2 a {
@@ -416,11 +419,11 @@ footer div {
     position: absolute;
     background: var(--black-elements);
     left: 0;
-    top: -10.4em;
+    top: -15em;
     height: auto;
     width: 100%;
   }
-  .submenu {
+.submenu {
     border: var(--linkelement) solid 1px;
     left: 0;
     top: 0;
@@ -431,6 +434,8 @@ footer div {
   header > nav > div:nth-child(2) > ul > div {
     visibility: visible;
   }
+  
+  
   .menu:active,
   .menu:hover {
     top: calc(7.5rem + 3vw);
@@ -449,12 +454,19 @@ footer div {
     display: block;
     width: 100%;
   }
+
+/*the beginn of starthelyek specifed style elements for under 800px*/
+.container {
+  height: 100vh;
+}
+
+container div div h1 a {
+  font-size: clamp(0.7rem, 3vw, 2rem );
+}
+/*the end of starthelyek specifed style elements for under 800px*/
+
 }
 @media only screen and (max-width: 600px) {
-  .menuhider {
-    /* display: none; */
-  }
-
   .menu {
     visibility: visible;
     display: block;
@@ -481,12 +493,6 @@ footer div {
     width: initial;
     margin-left: 1rem;
   }
-
-  .menu:active,
-  .menu:hover {
-  }
-
-  .menu > li,
   .submenu > li {
     padding-top: 0.8em;
   }
@@ -547,4 +553,12 @@ footer div {
     opacity: 1;
     transform: scaleY(1);
   }
+/*the beginn of starthelyek specifed style elements for under 600px*/
+.container {
+  height: 100vh;
+}
+
+
+/*the end of starthelyek specifed style elements for under 600px*/
+  
 }
