@@ -401,6 +401,19 @@ footer div {
 
 /*the end of starthelyek specifed style elements*/
 
+.klublista li {
+  list-style: none;
+  }
+.klublista li a {
+  text-decoration: none;
+  color: var(--white-elements);
+
+} 
+.klublista li a:visited, .klublista li a:active, .klublista li a:focus {
+  color: var(--white-elements);
+}
+
+
 /* Responsives for smaller devices*/
 @media only screen and (max-width: 900px) {
   .submenu {
