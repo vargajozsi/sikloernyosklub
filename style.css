@@ -414,6 +414,18 @@ footer div {
 }
 
 
+/*the begin of sikloernyozes specifed style elements*/
+.normal-ul {
+  background-color: var(--attetszo-sotet);
+}
+.normal-ul li {
+  padding: 0 4rem;
+  font-size: 2rem;
+  color: var(--white-elements);
+  list-style-type: circle;
+}
+/*the begin of sikloernyozes specifed style elements*/
+
 /* Responsives for smaller devices*/
 @media only screen and (max-width: 900px) {
   /* .submenu {
