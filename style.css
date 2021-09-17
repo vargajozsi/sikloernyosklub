@@ -170,7 +170,7 @@ h1 {
   font-stretch: 2em;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding: 0.5rem;
+  padding: 4rem 0.5rem;
   letter-spacing: 0.1em;
   animation-name: h1animation;
   animation-duration: 1s;
@@ -416,16 +416,18 @@ footer div {
 
 /* Responsives for smaller devices*/
 @media only screen and (max-width: 900px) {
-  .submenu {
+  /* .submenu {
     left: -100%;
-  }
+  } */
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 990px) {
   header {
     position: relative;
   }
-
+  .submenu {
+    left: -100%;
+  }
   .menu {
     visibility: hidden;
     flex-flow: column;
@@ -451,7 +453,7 @@ footer div {
   
   .menu:active,
   .menu:hover {
-    top: calc(7.5rem + 3vw);
+    top: calc(7rem + 3vw);
     visibility: visible;
   }
 
