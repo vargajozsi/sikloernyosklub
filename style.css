@@ -426,6 +426,49 @@ footer div {
 }
 /*the begin of sikloernyozes specifed style elements*/
 
+/*the begin of starthelyek specifed style elements*/
+.starthely-table {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  color: var(--white-elements);
+  background-color: var(--attetszo-sotet);
+  border-collapse: collapse;
+  width: 90%;
+  text-align: center;
+  z-index: -5;  
+  height: auto;
+}
+.starthely-table thead {
+  color: var(--black-elements);
+  background: white;
+  position: sticky;
+  top: 9.6rem; /* Don't forget this, required for the stickiness */
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+  height: 5rem;
+}
+
+.nincs-adat td{
+  background-color: var(--linkelement);
+}
+
+.free td {
+  background-color: green;
+}
+
+.tiltott td {
+  background-color: red;
+}
+
+.starthely-table tfoot {
+  color: var(--black-elements);
+  background: white;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+  height: 5rem;
+}
+/*the begin of starthelyek specifed style elements*/
+
 /* Responsives for smaller devices*/
 @media only screen and (max-width: 900px) {
   /* .submenu {
@@ -434,6 +477,9 @@ footer div {
 }
 
 @media only screen and (max-width: 990px) {
+  .starthely-table thead {
+    top: 0;
+  }
   header {
     position: relative;
   }
