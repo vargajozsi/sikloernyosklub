@@ -487,7 +487,7 @@ footer div {
 }
 
 .nincs-adat td{
-  background-color: rgb(170, 150, 150);
+  background: linear-gradient(to bottom, #ffffff 0%,#dee2e1 50%,#d6d6d1 51%,#d6d6d1 100%); ; 
 }
 
 .free td {
