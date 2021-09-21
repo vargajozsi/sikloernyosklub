@@ -1,1 +1,2 @@
 sikloernyosklub.hu website
+Magyarországi siklóernyős gyűjtőoldal
