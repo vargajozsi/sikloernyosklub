@@ -20,6 +20,7 @@ html {
   padding: 0;
 }
 body {
+  width: 100%;
   background-color: rgb(0, 0, 0);
   background-image: url(media/background.jpg.jpg);
   background-size: cover;
@@ -428,18 +429,23 @@ footer div {
 
 /*the begin of starthelyek specifed style elements*/
 .starthely-table {
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  margin: 2rem auto;
   font-size: 2rem;
   color: var(--white-elements);
   background-color: var(--attetszo-sotet);
   border-collapse: collapse;
   width: 90%;
   text-align: center;
-  z-index: -5;  
   height: auto;
 }
+.starthely-table a {
+  text-decoration: none;
+  color: var(--white-elements);
+}
+
 .starthely-table thead {
   color: var(--black-elements);
   background: white;
@@ -450,7 +456,7 @@ footer div {
 }
 
 .nincs-adat td{
-  background-color: var(--linkelement);
+  background-color: rgb(170, 150, 150);
 }
 
 .free td {
