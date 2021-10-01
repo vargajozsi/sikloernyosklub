@@ -427,7 +427,7 @@ footer div {
   width: 100%;
   margin: 0 auto;
   font-size: 2rem;
-  color: var(--white-elements);
+  color: var(--black-elements);
   background-color: var(--attetszo-sotet);
   border-collapse: collapse;
   width: 90%;
@@ -436,7 +436,7 @@ footer div {
 }
 .starthely-table a {
   text-decoration: none;
-  color: var(--white-elements);
+  color: var(--black-elements);
 }
 
 .starthely-table thead {
@@ -457,11 +457,23 @@ footer div {
 }
 
 .free td {
-  background-color: green;
+  background: linear-gradient(
+    to bottom,
+    #28ec63 0%,
+    #28ec63 50%,
+    #029221 51%,
+    #029221 100%
+  );
 }
 
 .tiltott td {
-  background-color: red;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 66, 66) 50%,
+    rgb(255, 66, 66) 50%,
+    red 51%,
+    red 100%
+  );
 }
 
 .starthely-table tfoot {
