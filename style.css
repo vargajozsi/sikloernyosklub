@@ -174,7 +174,7 @@ menu > li:hover > a {
 .menu > li:hover > a + .submenu {
   opacity: 1;
   transform: scaleY(1);
-  transition: 0.5s;
+  transition: transform 0.5s;
 }
 
 /* beginn of main */
@@ -313,6 +313,7 @@ q {
 }
 
 footer {
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -345,13 +346,39 @@ footer div {
   margin: 0 1rem;
 }
 
+.google-starthely:hover::after {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  content: "";
+  background: url(./media/bg2.jpg.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  width: 100vw;
+  height: calc(100vh - 13rem);
+}
+
+.tabla-starthely:hover::after {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  content: "";
+  background: url(./media/bg3.jpg.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  width: 100vw;
+  height: calc(100vh - 13rem);
+}
+
 .google-starthely:hover,
 .tabla-starthely:hover {
   background-color: var(--black-elements);
 }
 
 .wrapper-starthely:only-child a {
-  color: var(--white-elements);
+  color: var(--linkelement);
   text-decoration: none;
   font-size: 3rem;
   text-transform: lowercase;
@@ -446,11 +473,6 @@ footer div {
 /*the begin of starthelyek specifed style elements*/
 
 /* Responsives for smaller devices*/
-@media only screen and (max-width: 900px) {
-  /* .submenu {
-    left: -100%;
-  } */
-}
 
 @media only screen and (max-width: 990px) {
   .starthely-table thead {
@@ -619,7 +641,9 @@ footer div {
 
   body > main > div > div:nth-child(3) > div.content > div {
     left: -46vw;
+    width: -moz-fit-content;
     width: fit-content;
+
   }
   .container {
     height: 85vh;
