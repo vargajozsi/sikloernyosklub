@@ -424,10 +424,51 @@ footer div {
   border: 1px dotted var(--linkelement);
 }
 
-.clubcard .tevekenysegek, .clubcard .ertekelesek {
-  display: none;
+.pic-header {
+  min-width: 100%;
+  min-height: 15rem;
 }
 
+#pic-header-airborne {
+  background: url(./media/airborneBg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#pic-header-aeroclub {
+  background: url(./media/aeroclub-logo-web.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic-header-amator {
+  background: url(./media/amatorBg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic-header-flyaway {
+  background: url(./media/flyawayBg.png);
+  background-size: cover;
+  background-position: center;
+
+}
+
+#pic-header-sirius {
+  background: url(./media/siriusBg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic-header-griff {
+  background: url(./media/griffBg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.clubcard .tevekenysegek,
+.clubcard .ertekelesek {
+  display: none;
+}
 
 .clubcard:active {
   background-color: var(--black-elements);
@@ -437,7 +478,8 @@ footer div {
   width: 100vw;
 }
 
-.clubcard:hover .tevekenysegek, .clubcard:hover .ertekelesek {
+.clubcard:hover .tevekenysegek,
+.clubcard:hover .ertekelesek {
   display: block;
 }
 .clubcard a {
@@ -718,23 +760,21 @@ th {
   }
 
   /*the end of starthelyek specifed style elements for und er 600px*/
-/*the begin of klubok specifed style elements for und er 600px*/
-.wrapper-klubs {
-  grid-template-columns: 1fr;
-}
+  /*the begin of klubok specifed style elements for und er 600px*/
+  .wrapper-klubs {
+    grid-template-columns: 1fr;
+  }
 
-/*-------the begin of clubcard specifed style elements*/
-.clubcard {
-  border: none;
-}
+  /*-------the begin of clubcard specifed style elements*/
+  .clubcard {
+    border: none;
+  }
 
-.clubcard:active {
-  position: relative;
-  top: 0;
-}
-/*-------the end of clubcard specifed style elements*/
+  .clubcard:active {
+    position: relative;
+    top: 0;
+  }
+  /*-------the end of clubcard specifed style elements*/
 
-/*the end of klubok specifed style elements*/
-
-
+  /*the end of klubok specifed style elements*/
 }
