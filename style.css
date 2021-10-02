@@ -174,7 +174,7 @@ menu > li:hover > a {
 .menu > li:hover > a + .submenu {
   opacity: 1;
   transform: scaleY(1);
-  transition: 0.5s;
+  transition: transform 0.5s;
 }
 
 /* beginn of main */
@@ -313,6 +313,7 @@ q {
 }
 
 footer {
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -327,103 +328,67 @@ footer div {
 }
 
 /*the beginn of starthelyek specifed style elements*/
-.container {
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
+.wrapper-starthely {
+  margin: 0 auto;
+  height: calc(100vh - 13rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  justify-content: center;
 }
 
-.container .colums {
-  width: 33.3%;
-  height: 100%;
-  float: left;
-  border-right: solid rgba(255, 255, 255, 0.5);
-  z-index: 1;
+.google-starthely,
+.tabla-starthely {
+  background-color: var(--attetszo-sotet);
+  justify-self: stretch;
+  text-align: center;
+  padding: 3rem 0;
+  margin: 0 1rem;
 }
-.container .colums:last-child {
-  border-right: none;
-}
-.container .colums .content {
-  position: relative;
-  height: 100%;
-  max-width: 100%;
-}
-.container .colums .content h1 {
+
+.google-starthely:hover::after {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  min-height: 25rem;
-  background: rgba(0, 0, 0, 0.5);
-  border-top: solid rgba(255, 255, 255, 0.5);
-  border-bottom: solid rgba(255, 255, 255, 0.5);
-}
-
-.container .colums .content .box {
-  position: absolute;
-  top: 50%;
-  transform: translateY(100%);
-  padding: 2rem;
-  background: rgba(0, 0, 0, 1);
-  transition: 2s;
-  opacity: -1;
-}
-
-.container .colums:hover .content .box {
-  opacity: 1;
-  transform: translateY(-50%);
-}
-
-.container .colums .content .box h2 {
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.container .colums:hover .content .box p {
-  font-size: clamp(1rem, 2vw, 3rem);
-  line-height: 1.5em;
-  opacity: 1;
-}
-
-.container .colums .bg {
-  position: absolute;
-  top: 0;
+  top: 10rem;
   left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+  content: "";
+  background: url(./media/bg2.jpg.jpg);
+  background-size: cover;
+  background-position: center;
   z-index: -1;
-}
-.container .colums:hover .bg.bg1 {
-  background: url(media/bg1.jpg.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  transition: 00.5s;
-}
-.container .colums:hover .bg.bg2 {
-  background: url(media/bg2.jpg.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  transition: 00.5s;
-}
-.container .colums:hover .bg.bg3 {
-  background: url(media/bg3.jpg.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  transition: 00.5s;
-}
-.container div div h1 a {
-  color: var(--linkelement);
-  font-size: clamp(1rem, 4vw, 5rem);
-  text-decoration: none;
-}
-.container div div h2 a {
-  color: var(--linkelement);
-  text-decoration: none;
+  width: 100vw;
+  height: calc(100vh - 13rem);
 }
 
+.tabla-starthely:hover::after {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  content: "";
+  background: url(./media/bg3.jpg.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  width: 100vw;
+  height: calc(100vh - 13rem);
+}
+
+.google-starthely:hover,
+.tabla-starthely:hover {
+  background-color: var(--black-elements);
+}
+
+.wrapper-starthely:only-child a {
+  color: var(--linkelement);
+  text-decoration: none;
+  font-size: 3rem;
+  text-transform: lowercase;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.wrapper-starthely:only-child a:hover {
+  color: var(--linkelement);
+}
 /*the end of starthelyek specifed style elements*/
 
 .klublista li {
@@ -462,7 +427,7 @@ footer div {
   width: 100%;
   margin: 0 auto;
   font-size: 2rem;
-  color: var(--white-elements);
+  color: var(--black-elements);
   background-color: var(--attetszo-sotet);
   border-collapse: collapse;
   width: 90%;
@@ -475,7 +440,7 @@ th {
 }
 .starthely-table a {
   text-decoration: none;
-  color: var(--white-elements);
+  color: var(--black-elements);
 }
 
 .starthely-table thead {
@@ -498,20 +463,20 @@ th {
 .free td {
   background: linear-gradient(
     to bottom,
-    #00aa80 0%,
-    #00aa80 50%,
-    #008f6b 51%,
-    #008f6b 100%
+    #28ec63 0%,
+    #28ec63 50%,
+    #029221 51%,
+    #029221 100%
   );
 }
 
 .tiltott td {
   background: linear-gradient(
     to bottom,
-    #a80101 0%,
-    #a80101 50%,
-    #880000 51%,
-    #880000 100%
+    rgb(255, 66, 66) 50%,
+    rgb(255, 66, 66) 50%,
+    red 51%,
+    red 100%
   );
 }
 
@@ -524,11 +489,6 @@ th {
 /*the begin of starthelyek specifed style elements*/
 
 /* Responsives for smaller devices*/
-@media only screen and (max-width: 900px) {
-  /* .submenu {
-    left: -100%;
-  } */
-}
 
 @media only screen and (max-width: 990px) {
   .starthely-table thead {
@@ -580,21 +540,6 @@ th {
     display: block;
     width: 100%;
   }
-
-  /*the beginn of starthelyek specifed style elements for under 800px*/
-  .container {
-    height: 85vh;
-  }
-
-  container div div h1 a {
-    font-size: clamp(0.7rem, 3vw, 2rem);
-  }
-
-  .container .colums:hover .content .box p {
-    font-size: clamp(1rem, 2vw, 2rem);
-    line-height: 1em;
-  }
-  /*the end of starthelyek specifed style elements for under 800px*/
 }
 @media only screen and (max-width: 600px) {
   .menu {
@@ -684,6 +629,22 @@ th {
     transform: scaleY(1);
   }
   /*the beginn of starthelyek specifed style elements for under 600px*/
+  .wrapper-starthely {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    align-content: center;
+  }
+
+  .google-starthely,
+  .tabla-starthely {
+    margin: 1rem;
+    padding: 1rem 0;
+  }
+
+  .wrapper-starthely:only-child a {
+    font-size: 2rem;
+  }
+
   .box {
     z-index: 100;
   }
@@ -696,7 +657,9 @@ th {
 
   body > main > div > div:nth-child(3) > div.content > div {
     left: -46vw;
+    width: -moz-fit-content;
     width: fit-content;
+
   }
   .container {
     height: 85vh;
@@ -707,5 +670,5 @@ th {
     line-height: 1em;
   }
 
-  /*the end of starthelyek specifed style elements for under 600px*/
+  /*the end of starthelyek specifed style elements for und er 600px*/
 }

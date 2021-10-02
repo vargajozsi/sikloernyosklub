@@ -1,206 +1,314 @@
 <!DOCTYPE html>
 <html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Siklóernyőzés, siklóernyős klubok, siklóernyős felszerelések, minden amit tudni szeretnél a siklóernyőzésről."
+    />
+    <meta property="og:title" content="sikloernyosklub.hu" />
+    <meta property="og:url" content="https://www.sikloernyosklub.hu/" />
+    <meta
+      property="og:image"
+      content="https://www.sikloernyosklub.hu/media/sikloernyosklub.jpg"
+    />
+    <meta property="og:site_name" content="sikloernyosklub.hu" />
+    <meta property="og:description" content="sikloernyosklub.hu" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description"
-    content="Siklóernyőzés, siklóernyős klubok, siklóernyős felszerelések, minden amit tudni szeretnél a siklóernyőzésről." />
-  <meta property="og:title" content="sikloernyosklub.hu" />
-  <meta property="og:url" content="https://www.sikloernyosklub.hu/" />
-  <meta property="og:image" content="https://www.sikloernyosklub.hu/media/sikloernyosklub.jpg" />
-  <meta property="og:site_name" content="sikloernyosklub.hu" />
-  <meta property="og:description" content="sikloernyosklub.hu" />
+    <meta name="DC.coverage" content="Hungary" />
+    <meta name="DC.description" content="sikloernyosklub.hu" />
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.identifier" content="https://www.sikloernyosklub.hu" />
+    <meta name="DC.publisher" content="sikloernyosklub.hu" />
+    <meta
+      name="keywords"
+      content="Siklóernyőzés, , siklóernyős klubok, siklóernyős felszerelés, siklóernyős oktatók, siklóernyőzés veszélyei"
+    />
 
-  <meta name="DC.coverage" content="Hungary" />
-  <meta name="DC.description" content="sikloernyosklub.hu" />
-  <meta name="DC.format" content="text/html" />
-  <meta name="DC.identifier" content="https://www.sikloernyosklub.hu" />
-  <meta name="DC.publisher" content="sikloernyosklub.hu" />
-  <meta name="keywords"
-    content="Siklóernyőzés, , siklóernyős klubok, siklóernyős felszerelés, siklóernyős oktatók, siklóernyőzés veszélyei" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  
-  <title>Siklóernyősklub Siklóernyőzés</title>
+    <title>Siklóernyősklub Siklóernyőzés</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFB11JF5N7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BFB11JF5N7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-BFB11JF5N7");
-  </script>
-</head>
+      gtag("config", "G-BFB11JF5N7");
+    </script>
+  </head>
 
-<body>
-  <!--beginn of navigation-->
-  <header>
-    <nav class="navbar">
-      <div class="branding">
+  <body>
+    <!--beginn of navigation-->
+    <header>
+      <nav class="navbar">
+        <div class="branding">
+          <h2>
+            <a href="index.html" class="sikloernyosklub-logo"
+              ><img
+                class="klublogo"
+                src="media/sikloernyosklub-logo_sz.png"
+                alt="sikloernyos klub logo"
+            /></a>
+          </h2>
+        </div>
+
+        <div>
+          <label for="imput-hamburger" class="hamburger"></label>
+          <input type="checkbox" id="imput-hamburger" hidden />
+          <ul class="menu">
+            <li>
+              <a href="sikloernyosklubok.html" class="menu-link"
+                >Siklóernyős Klubok</a
+              >
+            </li>
+            <li class="has-dropdown">
+              <a class="menu-link" href="#"
+                >Siklóernyőzés<span class="arrow">˅</span>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="sikloernyozesrol.html" class="menu-link"
+                    >Siklóernyőzésről</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="menu-link">Siklóernyős Felszerelések</a>
+                </li>
+                <li>
+                  <a href="#" class="menu-link">Siklóernyős Tanfolyamok</a>
+                </li>
+
+                <li><a href="#" class="menu-link">Siklóernyős Oktatók</a></li>
+                <li><a href="#" class="menu-link">Tananyagok</a></li>
+                <li><a href="#" class="menu-link">K.S.P.</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="starthelyek.html" class="menu-link">Starthelyek</a>
+            </li>
+            <li class="has-dropdown">
+              <a href="#" class="menu-link"
+                >Tandemrepülés<span class="arrow">˅</span></a
+              >
+              <ul class="submenu">
+                <li>
+                  <a href="#" class="menu-link" class="menu-link"
+                    >Tandemrepülésről Általában</a
+                  >
+                </li>
+                <li><a href="#" class="menu-link">Tandempilóták</a></li>
+                <li>
+                  <a href="#" class="menu-link">Jelentkezés Tandemrepülésre</a>
+                </li>
+                <li><a href="#" class="menu-link">Ajándékutalvány</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#" class="menu-link"
+                >Hasznos<span class="arrow">˅</span></a
+              >
+              <ul class="submenu">
+                <li><a href="#" class="menu-link">Meteorológia</a></li>
+                <li><a href="#" class="menu-link">Gyártók</a></li>
+                <li><a href="#" class="menu-link">Szervezetek</a></li>
+                <li><a href="#" class="menu-link">Reporvos</a></li>
+                <li><a href="#" class="menu-link">Xcontest</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#" class="menu-link"
+                >Túrák<span class="arrow">˅</span></a
+              >
+              <ul class="submenu">
+                <li><a href="#" class="menu-link">Túra Leírások</a></li>
+                <li><a href="#" class="menu-link">Túranaptár</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="sikloernyoshirek.html" class="menu-link">Hírek</a>
+            </li>
+            <div class="menuhider"><div class="menuhiderarrow"></div></div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="wrapper">
+        <h1>Üdvözlünk Magyarország legjobb sikloernyős klubjában!</h1>
         <h2>
-          <a href="index.html" class="sikloernyosklub-logo"><img class="klublogo"
-              src="media/sikloernyosklub-logo_sz.png" alt="sikloernyos klub logo" /></a>
+          Melyik a legjobb siklóernyős klub ahol biztonságban, magas színvonalon
+          tartják a siklóernyős tanfolyamokat? Keressük meg együtt a választ!
         </h2>
-      </div>
-      
-      <div>
-        <label for="imput-hamburger" class="hamburger "></label>
-        <input type="checkbox" id="imput-hamburger" hidden>
-        <ul class="menu">
-          <li><a href="sikloernyosklubok.html" class="menu-link">Siklóernyős Klubok</a></li>
-          <li class="has-dropdown">
-            <a class="menu-link" href="#">Siklóernyőzés<span class="arrow">˅</span>
-            </a>
-            <ul class="submenu">
-              <li><a href="sikloernyozesrol.html" class="menu-link">Siklóernyőzésről</a></li>
-              <li>
-                <a href="#" class="menu-link">Siklóernyős Felszerelések</a>
-              </li>
-              <li>
-                <a href="#" class="menu-link">Siklóernyős Tanfolyamok</a>
-              </li>
-              
-              <li><a href="#" class="menu-link">Siklóernyős Oktatók</a></li>
-              <li><a href="#" class="menu-link">Tananyagok</a></li>
-              <li><a href="#" class="menu-link">K.S.P.</a></li>
-            </ul>
-          </li>
-          <li >
-            <a href="starthelyek.html" class="menu-link">Starthelyek<!-- <span class="arrow">˅</span>--></a>
-           <!-- <ul class="submenu">
-              <li>
-                <a href="googleterkepstarthelyek.html" class="menu-link">Magyarországi Starthelyek</a>
-              </li>
-              <li>
-                <a href="europastarthelyek.html" class="menu-link">Európai Starthelyek</a>
-              </li>
-              <li>
-                <a href="egyebstarthelyek.html" class="menu-link">Egyéb Starthelyek</a>
-              </li>
-            </ul> -->
-          </li>
-          <li class="has-dropdown">
-            <a href="#" class="menu-link">Tandemrepülés<span class="arrow">˅</span></a>
-            <ul class="submenu">
-              <li>
-                <a href="#" class="menu-link" class="menu-link">Tandemrepülésről Általában</a>
-              </li>
-              <li><a href="#" class="menu-link">Tandempilóták</a></li>
-              <li>
-                <a href="#" class="menu-link">Jelentkezés Tandemrepülésre</a>
-              </li>
-              <li><a href="#" class="menu-link">Ajándékutalvány</a></li>
-            </ul>
-          </li>
-
-          <li class="has-dropdown">
-            <a href="#" class="menu-link">Hasznos<span class="arrow">˅</span></a>
-            <ul class="submenu">
-              <li><a href="#" class="menu-link">Meteorológia</a></li>
-              <li><a href="#" class="menu-link">Gyártók</a></li>
-              <li><a href="#" class="menu-link">Szervezetek</a></li>
-              <li><a href="#" class="menu-link">Reporvos</a></li>
-              <li><a href="#" class="menu-link">Xcontest</a></li>
-            </ul>
-          </li>
-          <li class="has-dropdown">
-            <a href="#" class="menu-link">Túrák<span class="arrow">˅</span></a>
-            <ul class="submenu">
-              <li><a href="#" class="menu-link">Túra Leírások</a></li>
-              <li><a href="#" class="menu-link">Túranaptár</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="sikloernyoshirek.html" class="menu-link">Hírek</a>
-          </li>
-          <div class="menuhider"><div class="menuhiderarrow"></div></div>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="wrapper">
-      <h1>
-        Üdvözlünk Magyarország legjobb sikloernyős klubjában!
-      </h1>
-        <h2>Melyik a legjobb siklóernyős klub ahol biztonságban, magas színvonalon tartják a siklóernyős tanfolyamokat? Keressük meg együtt a választ!
-        </h2>      
-        <p class="bevezető">A legkiválóbb klub címe objektív vagy szubjektív döntés kérdése. Amennyiben a többiek véleményére vagy kiváncsi,
-            mindenképpen elengedhetetlen annak ismerete, hogy egyáltalán milyen lehetőségek közül választhatsz, ha siklóernyőzést szeretnél tanulni egy klubban.
-            Mi arra próbálunk vállalkozni, hogy felderítsük Magyarországon az összes lehetőséget, amiből aztán a lehető legadekváltabb tulajdonságai alapján folyamatosan értékeljük, rangsoroljuk azokat. 
+        <p class="bevezető">
+          A legkiválóbb klub címe objektív vagy szubjektív döntés kérdése.
+          Amennyiben a többiek véleményére vagy kiváncsi, mindenképpen
+          elengedhetetlen annak ismerete, hogy egyáltalán milyen lehetőségek
+          közül választhatsz, ha siklóernyőzést szeretnél tanulni egy klubban.
+          Mi arra próbálunk vállalkozni, hogy felderítsük Magyarországon az
+          összes lehetőséget, amiből aztán a lehető legadekváltabb tulajdonságai
+          alapján folyamatosan értékeljük, rangsoroljuk azokat.
         </p>
         <ul class="tartalom klublista">
-        <li> Aero Club Hajdúszoboszló Sportegyesület</li>
-        <li><a href="https://www.airborneclub.hu/" target="_blank">Airborne Siklóernyős Egyesület</a></li>
-        <li><a href="http://amatorse.hu/" target="_blank">Amatőr Siklórepülők Egyesülete</a></li>
-        <li><a href="http://csabafly.hu/site/" target="_blank">Békéscsabai Siklóernyős Klub</a></li>
-        <li><a href="https://blue-sky.hu/" target="_blank">Blue Sky SE</a></li>
-        <li> Budai Siklórepülő Egyesület</li>
-        <li><a href="http://easyfly.hu" target="_blank">Easy Fly Siklóernyős Egyesület</a></li>
-        <li><a href="https://www.facebook.com/egedeagles/" target="_blank">Eged Eagles Siklóernyős SE</a></li>
-        <li><a href="https://www.facebook.com/sikloernyo.iskola" target="_blank">enAIRgy Siklóernyős Klub</a></li>
-        <li> Egry Sárkányrepülő Klub</li>
-        <li><a href="http://sikloernyozes.com/" target="_blank">Fair Play Siklórepülő Sportegyesület</a></li>
-        <li><a href="https://cloudbase.hu/" target="_blank">Felhőalap Sportegyesület - cloudbase</a></li>
-        <li><a href="https://dev.felhout.hu/" target="_blank">Felhőút Sportrepülő Egyesület</a></li>
-        <li><a href="https://www.flyaway.hu/" target="_blank">Fly Away Sport Egyesület</a></li>
-        <li> Fly Air Sportrepülő Egyesület</li>
-        <li><a href="http://www.freeair.hu/" target="_blank">Free Air Siklóernyős Egyesület</a></li>
-        <li> Free Air Siklóernyős Egyesület</li>
-        <li> Gedeon Ferenc Sárkányrepülő Egyesület</li>
-        <li><a href="https://griffsc.hu/" target="_blank">Griff Siklóernyős Club és Sportegyesület</a></li>
-        <li><a href="http://gyssk2001.fw.hu/a.htm" target="_blank">Gyöngyösi Siklóernyős Sport Klub 2001.</a></li>
-        <li> Győri Aero Klub Egyesület</li>
-        <li> Izsáki Repülő Egyesület</li>
-        <li> Jelky András Repülő Egyesület</li>
-        <li><a href="#">Kamikaze Sportegyesület "Felszámolás alatt"</a></li>
-        <li><a href="https://www.facebook.com/groups/105892383116484/" target="_blank">KEMRSE Siklóernyős, Búvár és Extrémsport Szakosztály</a></li>
-        <li><a href="https://2se.hu/" target="_blank">2 SE Siklóernyős Klub</a></li>
-        <li> Kiskun Repülő Egyesület</li>
-        <li> Kvasz András Békés Megyei Repülő és Ejtőernyős Egyesület </li>
-        <li> Lelle Sárkányrepülő Klub Boglárlelle</li>
-        <li><a href="https://www.facebook.com/matraextrem/" target="_blank">Mátra Extrém Sportrepülő Egyesület</a></li>
-        <li> Motoros Könnyűrepülő Sportszövetség</li>
-        <li><a href="https://www.facebook.com/mse.sikloernyo/" target="_blank">Műegyetemi Siklórepülő Egyesület - MSE</a></li>
-        <li><a href="https://mpc.hu/" target="_blank"></a>MPC Sportegyesület</li>
-        <li> Nagykanizsai Sportrepülő Egyesület</li>
-        <li><a href="#">Nagy Lufi Hőlégballon Sportegyesület</a></li>
-        <li> Nyíregyházi Légisport Egyesület</li>
-        <li> Old Timer Aero Club</li>
-        <li> Palota Aero Club</li>
-        <li> Pinka Aero Club</li>
-        <li><a href="#">Pannonia Solaris SE</a></li>
-        <li><a href="#">Pilisi Siklórepülő Egyesület</a></li>
-        <li><a href="#">PPG Baráti Társaság</a></li>
-        <li> Repülő Klub Q'Tai Fly</li>
-        <li><a href="http://sirius-se.hu/" target="_blank">Sirius Repülő Klub</a></li>
-        <li><a href="http://www.skyclub.hu/" target="_blank">Sky Club Győr</a></li>
-        <li> Sky Escort Hungary Aero Club</li>
-        <li> Soltvadkert Repülősport Egyesület</li>
-        <li> Sólyom Repülő Egyesület</li>
-        <li><a href="https://www.facebook.com/sopronparagliding/" target="_blank">Soproni Siklóernyős Egyesület</a></li>
-        <li><a href="#">Szoboszlói Darazsak SE</a></li>
-        <li> Tapolcai Repülő Egyesület</li>
-        <li><a href="https://www.facebook.com/tokajflyse/" target="_blank">Tokaj Fly SE</a></li>
-        <li><a href="#"></a>Turul Siklórepülő Egyesület</li>
-        <li><a href="#">Winchflyer SE</a></li>
-        <li> Zenit Sportrepülő Egyesület</li>
-        <li><a href="#"></a>Zöld Kaland Egyesület</li>
-
-    </ul>
-
-      
-    </div>
-  </main>
-  <footer>
-    <div>&copy; Copyright 2021 sikloernyosklub.hu</div>
-  </footer>
-  <script type="text/javascript" src="scripts/script.js"></script>
-</body>
-
+          <li>Aero Club Hajdúszoboszló Sportegyesület</li>
+          <li>
+            <a href="https://www.airborneclub.hu/" target="_blank"
+              >Airborne Siklóernyős Egyesület</a
+            >
+          </li>
+          <li>
+            <a href="http://amatorse.hu/" target="_blank"
+              >Amatőr Siklórepülők Egyesülete</a
+            >
+          </li>
+          <li>
+            <a href="http://csabafly.hu/site/" target="_blank"
+              >Békéscsabai Siklóernyős Klub</a
+            >
+          </li>
+          <li>
+            <a href="https://blue-sky.hu/" target="_blank">Blue Sky SE</a>
+          </li>
+          <li>Budai Siklórepülő Egyesület</li>
+          <li>
+            <a href="http://easyfly.hu" target="_blank"
+              >Easy Fly Siklóernyős Egyesület</a
+            >
+          </li>
+          <li>
+            <a href="https://www.facebook.com/egedeagles/" target="_blank"
+              >Eged Eagles Siklóernyős SE</a
+            >
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sikloernyo.iskola" target="_blank"
+              >enAIRgy Siklóernyős Klub</a
+            >
+          </li>
+          <li>Egry Sárkányrepülő Klub</li>
+          <li>
+            <a href="http://sikloernyozes.com/" target="_blank"
+              >Fair Play Siklórepülő Sportegyesület</a
+            >
+          </li>
+          <li>
+            <a href="https://cloudbase.hu/" target="_blank"
+              >Felhőalap Sportegyesület - cloudbase</a
+            >
+          </li>
+          <li>
+            <a href="https://dev.felhout.hu/" target="_blank"
+              >Felhőút Sportrepülő Egyesület</a
+            >
+          </li>
+          <li>
+            <a href="https://www.flyaway.hu/" target="_blank"
+              >Fly Away Sport Egyesület</a
+            >
+          </li>
+          <li>Fly Air Sportrepülő Egyesület</li>
+          <li>
+            <a href="http://www.freeair.hu/" target="_blank"
+              >Free Air Siklóernyős Egyesület</a
+            >
+          </li>
+          <li>Free Air Siklóernyős Egyesület</li>
+          <li>Gedeon Ferenc Sárkányrepülő Egyesület</li>
+          <li>
+            <a href="https://griffsc.hu/" target="_blank"
+              >Griff Siklóernyős Club és Sportegyesület</a
+            >
+          </li>
+          <li>
+            <a href="http://gyssk2001.fw.hu/a.htm" target="_blank"
+              >Gyöngyösi Siklóernyős Sport Klub 2001.</a
+            >
+          </li>
+          <li>Győri Aero Klub Egyesület</li>
+          <li>Izsáki Repülő Egyesület</li>
+          <li>Jelky András Repülő Egyesület</li>
+          <li><a href="#">Kamikaze Sportegyesület "Felszámolás alatt"</a></li>
+          <li>
+            <a
+              href="https://www.facebook.com/groups/105892383116484/"
+              target="_blank"
+              >KEMRSE Siklóernyős, Búvár és Extrémsport Szakosztály</a
+            >
+          </li>
+          <li>
+            <a href="https://2se.hu/" target="_blank">2 SE Siklóernyős Klub</a>
+          </li>
+          <li>Kiskun Repülő Egyesület</li>
+          <li>Kvasz András Békés Megyei Repülő és Ejtőernyős Egyesület</li>
+          <li>Lelle Sárkányrepülő Klub Boglárlelle</li>
+          <li>
+            <a href="https://www.facebook.com/matraextrem/" target="_blank"
+              >Mátra Extrém Sportrepülő Egyesület</a
+            >
+          </li>
+          <li>Motoros Könnyűrepülő Sportszövetség</li>
+          <li>
+            <a href="https://www.facebook.com/mse.sikloernyo/" target="_blank"
+              >Műegyetemi Siklórepülő Egyesület - MSE</a
+            >
+          </li>
+          <li>
+            <a href="https://mpc.hu/" target="_blank">MPC Sportegyesület</a>
+          </li>
+          <li>Nagykanizsai Sportrepülő Egyesület</li>
+          <li><a href="#">Nagy Lufi Hőlégballon Sportegyesület</a></li>
+          <li>Nyíregyházi Légisport Egyesület</li>
+          <li>Old Timer Aero Club</li>
+          <li>Palota Aero Club</li>
+          <li>Pinka Aero Club</li>
+          <li><a href="#">Pannonia Solaris SE</a></li>
+          <li><a href="#">Pilisi Siklórepülő Egyesület</a></li>
+          <li><a href="#">PPG Baráti Társaság</a></li>
+          <li>Repülő Klub Q'Tai Fly</li>
+          <li>
+            <a href="http://sirius-se.hu/" target="_blank"
+              >Sirius Repülő Klub</a
+            >
+          </li>
+          <li>
+            <a href="http://www.skyclub.hu/" target="_blank">Sky Club Győr</a>
+          </li>
+          <li>Sky Escort Hungary Aero Club</li>
+          <li>Soltvadkert Repülősport Egyesület</li>
+          <li>Sólyom Repülő Egyesület</li>
+          <li>
+            <a
+              href="https://www.facebook.com/sopronparagliding/"
+              target="_blank"
+              >Soproni Siklóernyős Egyesület</a
+            >
+          </li>
+          <li><a href="#">Szoboszlói Darazsak SE</a></li>
+          <li>Tapolcai Repülő Egyesület</li>
+          <li>
+            <a href="https://www.facebook.com/tokajflyse/" target="_blank"
+              >Tokaj Fly SE</a
+            >
+          </li>
+          <li><a href="#">Turul Siklórepülő Egyesület</a></li>
+          <li><a href="#">Winchflyer SE</a></li>
+          <li>Zenit Sportrepülő Egyesület</li>
+          <li><a href="#">Zöld Kaland Egyesület</a></li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <div>&copy; Copyright 2021 sikloernyosklub.hu</div>
+    </footer>
+    <script type="text/javascript" src="scripts/script.js"></script>
+  </body>
 </html>
