@@ -51,6 +51,11 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  text-decoration: none;
+  color: var(--linkelement);
+}
+
 header nav h2 {
   text-align: left;
   margin: 0;
@@ -409,9 +414,18 @@ footer div {
 
 /*-------the begin of clubcard specifed style elements*/
 .clubcard {
-  background-color: #f7bb3c;
+  text-align: center;
+  background-color: var(--attetszo-sotet);
+  color: var(--white-elements);
 }
 
+.clubcard:hover {
+  background-color: var(--black-elements);
+}
+
+.clubcard a {
+  font-size: 2rem;
+}
 
 /*-------the end of clubcard specifed style elements*/
 
