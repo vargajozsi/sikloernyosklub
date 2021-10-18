@@ -337,9 +337,19 @@ footer div {
 }
 
 /*the beginn of starthelyek specifed style elements*/
+div.google-starthely > a,
+div.tabla-starthely > a {
+  font-size: 5rem;
+}
+#holfuyiframe {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  align-items: center;
+}
 .wrapper-starthely {
   margin: 0 auto;
-  height: calc(100vh - 13rem);
+  height: calc(100vh - 35rem);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
@@ -405,7 +415,6 @@ footer div {
 /*the begin of klubok specifed style elements*/
 .wrapper-klubs {
   width: 100vw;
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
@@ -413,11 +422,12 @@ footer div {
   justify-content: center;
   align-content: center;
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /*-------the begin of clubcard specifed style elements*/
 .clubcard {
+  margin: 1rem 1rem;
   text-align: center;
   background-color: var(--attetszo-sotet);
   color: var(--white-elements);
@@ -446,11 +456,16 @@ footer div {
   background-position: center;
 }
 
+#pic-header-blueSky {
+  background: url(./media/blueskyLogo.png);
+  background-size: cover;
+  background-position: center;
+}
+
 #pic-header-flyaway {
   background: url(./media/flyawayBg.png);
   background-size: cover;
   background-position: center;
-
 }
 
 #pic-header-sirius {
@@ -465,23 +480,17 @@ footer div {
   background-position: center;
 }
 
+#pic-header-kemrse {
+  background: url(./media/kemrseLogo.png);
+  background-size: cover;
+  background-position: left;
+}
+
 .clubcard .tevekenysegek,
 .clubcard .ertekelesek {
   display: none;
 }
 
-.clubcard:active {
-  background-color: var(--black-elements);
-  position: absolute;
-  top: 10rem;
-  left: 0;
-  width: 100vw;
-}
-
-.clubcard:hover .tevekenysegek,
-.clubcard:hover .ertekelesek {
-  display: block;
-}
 .clubcard a {
   font-size: 2rem;
 }
@@ -719,9 +728,12 @@ th {
     transform: scaleY(1);
   }
   /*the beginn of starthelyek specifed style elements for under 600px*/
+  #holfuyiframe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .wrapper-starthely {
     grid-template-columns: 1fr;
-    grid-auto-flow: row;
     align-content: center;
   }
 
