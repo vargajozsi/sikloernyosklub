@@ -511,8 +511,21 @@ div.tabla-starthely > a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
+}
+
+#pic-header-felhout {
+  background: url(./media/felhoutLogo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#pic-header-freeair {
+  background: url(./media/freeAirLogo.png);
+  background-size: cover;
+  background-position: top;
 
 }
+
 .clubcard .tevekenysegek,
 .clubcard .ertekelesek {
   display: none;
@@ -599,12 +612,12 @@ th {
 .tiltott td {
   background: linear-gradient(
     to bottom,
-    rgb(255, 66, 66) 50%,
-    rgb(255, 66, 66) 50%,
-    red 51%,
-    red 100%
+    #ffffff 0%,
+    #dee2e1 50%,
+    #d6d6d1 51%,
+    #d6d6d1 100%
   );
-}
+
 
 .starthely-table tfoot {
   color: var(--white-elements);
