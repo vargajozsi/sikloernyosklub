@@ -41,6 +41,7 @@ html {
   --linkelement-dark: #a37b24;
   --black-elements: black;
   --white-elements: #fff;
+  --hashtag-elements: #b9b9b9;
   --attetszo-sotet: rgba(0, 0, 0, 0.5);
 }
 
@@ -484,16 +485,13 @@ div.tabla-starthely > a {
   background-position: left;
 }
 
-
-
 #pic-header-egedEagles {
   background: url(./media/egedeaglesLogo.jpg);
   background-size: cover;
   background-position: left;
-
 }
 
-#pic-header-enairgy{
+#pic-header-enairgy {
   background: url(./media/enairgyLogo.jpg);
   background-size: cover;
   background-position: left;
@@ -503,10 +501,9 @@ div.tabla-starthely > a {
   background: url(./media/fairplajLogo.png);
   background-size: cover;
   background-position: left;
-
 }
 
-#pic-header-cludebase{
+#pic-header-cludebase {
   background: url(./media/cloudbaseLogo.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -523,7 +520,6 @@ div.tabla-starthely > a {
   background: url(./media/freeAirLogo.png);
   background-size: cover;
   background-position: top;
-
 }
 
 .clubcard .tevekenysegek,
@@ -553,7 +549,7 @@ address {
   color: var(--white-elements);
   list-style-type: circle;
 }
-/*the begin of sikloernyozes specifed style elements*/
+/*the end of sikloernyozes specifed style elements*/
 
 /*the begin of starthelyek specifed style elements*/
 .table-wrapper {
@@ -617,29 +613,125 @@ th {
     #d6d6d1 51%,
     #d6d6d1 100%
   );
-
-
+}
 .starthely-table tfoot {
   color: var(--white-elements);
   background: var(--attetszo-sotet);
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
   height: 5rem;
 }
-/*the begin of starthelyek specifed style elements*/
-
-/* Responsives for smaller devices*/
-
-
-@media only screen and (max-width: 1150px) {
-
-.wrapper-klubs {
-  grid-template-columns: repeat(2, 1fr);
+/*the end of starthelyek specifed style elements*/
+/* The begin of hirek specificed elements */
+.hirek-kontener {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
+article {
+  background-color: var(--attetszo-sotet);
+  margin: 2rem;
+  overflow: hidden;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(
+    to bottom,
+    var(--linkelement-dark),
+    rgba(252, 252, 252, 0.1)
+  );
+}
+.hir-cime {
+  display: flex;
+  background-color: var(--white-elements);
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  box-shadow: var(--linkelement) 0rem 1rem;
+}
+.hir-cime h2 {
+  max-width: 70%;
+  background-color: var(--white-elements);
+  color: var(--black-elements);
+  font-weight: 700;
+  /* font-family: "Great Vibes", cursive; */
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: clamp(1rem, 4vw, 5rem);
+  font-style: italic;
+}
 
+.hir-cime img {
+  max-width: 30%;
+  height: auto;
+  margin-right: 2rem;
+}
 
+.hir-tartalom {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: var(--black-elements);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
 
+.hir-tartalom p {
+  max-width: 60%;
+  margin: 1em;
+  font-size: clamp(1.5vw, 4vw, 2rem);
+}
 
+.hir-hashtag {
+  color: var(--hashtag-elements);
+}
+
+article:nth-child(3) {
+  display: none;
+}
+
+.norbi-galeria {
+  border: var(--white-elements) solid 1px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-gap: 1px;
+  align-items: start;
+  justify-items: center;
+  margin: 2rem;
+  max-width: 40%;
+}
+.norbi-galeria img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.norbi-galeria img:active {
+  position: absolute;
+  display: block;
+  width: auto;
+  height: 90vh;
+  right: 0;
+
+}
+.norbi-galeria img:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+/* The end of hirek specificed elements */
+
+/* end of main */
+/* Responsives for smaller devices*/
+
+@media only screen and (max-width: 1150px) {
+  .wrapper-klubs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media only screen and (max-width: 990px) {
   .starthely-table thead {
@@ -780,7 +872,6 @@ th {
     transform: scaleY(1);
   }
 
-
   /*the beginn of starthelyek specifed style elements for under 600px*/
   #holfuyiframe {
     grid-template-columns: repeat(2, 1fr);
@@ -844,4 +935,33 @@ th {
   /*-------the end of clubcard specifed style elements*/
 
   /*the end of klubok specifed style elements*/
+
+  /*the begin of hirek specifed style elements for under600*/
+
+  .hir-tartalom {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  .hir-tartalom p {
+    max-width: 100%;
+    justify-self: center;
+  }
+  .norbi-galeria {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .norbi-galeria img {
+    grid-column:  1/2;
+  }
+  .norbi-galeria img:active {
+    position: initial;
+    width: 100%;
+    height: auto;
+  }
+
+  /*the end of hirek specifed style elements for under600*/
 }
