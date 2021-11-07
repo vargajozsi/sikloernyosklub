@@ -631,6 +631,7 @@ th {
 }
 
 article {
+  max-width: max-content;
   background-color: var(--attetszo-sotet);
   margin: 2rem;
   overflow: hidden;
@@ -693,6 +694,7 @@ article:nth-child(3) {
   display: none;
 }
 
+
 .norbi-galeria {
   border: var(--white-elements) solid 1px;
   position: relative;
@@ -708,6 +710,8 @@ article:nth-child(3) {
   display: block;
   width: 100%;
   height: auto;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 .norbi-galeria img:active {
@@ -716,11 +720,20 @@ article:nth-child(3) {
   width: auto;
   height: 90vh;
   right: 0;
-
+  transition: filter, -webkit-filter 1s ease-in;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  z-index: 100;
+}
+.norbi-galeria img:hover {
+  transition: filter, -webkit-filter 3s ease-in;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
 .norbi-galeria img:nth-child(2) {
   grid-column: span 3;
   grid-row: span 3;
+  border: var(--black-elements) solid 2rem;
 }
 /* The end of hirek specificed elements */
 
