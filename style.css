@@ -440,67 +440,76 @@ div.tabla-starthely > a {
 
 #pic-header-airborne {
   background: url(./media/airborneBg.jpg);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 #pic-header-aeroclub {
   background: url(./media/aeroclub-logo-web.jpg);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 
 #pic-header-amator {
   background: url(./media/amatorBg.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 #pic-header-blueSky {
   background: url(./media/blueskyLogo.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 #pic-header-flyaway {
   background: url(./media/flyawayBg.png);
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 #pic-header-sirius {
   background: url(./media/siriusBg.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 #pic-header-griff {
   background: url(./media/griffBg.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 #pic-header-kemrse {
   background: url(./media/kemrseLogo.png);
-  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
   background-position: left;
 }
 
 #pic-header-egedEagles {
   background: url(./media/egedeaglesLogo.jpg);
   background-size: cover;
-  background-position: left;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #pic-header-enairgy {
   background: url(./media/enairgyLogo.jpg);
   background-size: cover;
-  background-position: left;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #pic-header-fairplay {
   background: url(./media/fairplajLogo.png);
-  background-size: cover;
-  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #pic-header-cludebase {
@@ -513,14 +522,50 @@ div.tabla-starthely > a {
 #pic-header-felhout {
   background: url(./media/felhoutLogo.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 #pic-header-freeair {
   background: url(./media/freeAirLogo.png);
-  background-size: cover;
-  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+#pic-header-2se  {
+  background: url(./media/2seLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#pic-header-matraextremse {
+  background: url(./media/matraextremLogo.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#pic-header-csabafly {
+  background: url(./media/csabaFlyLogo.png);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#pic-header-muegyetemi {
+  background: url(./media/muegyetemiLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#pic-header-mpc {
+  background: url(./media/mpcLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 .clubcard .tevekenysegek,
 .clubcard .ertekelesek {
@@ -660,7 +705,7 @@ article {
   font-weight: 700;
   /* font-family: "Great Vibes", cursive; */
   font-family: "Source Sans Pro", sans-serif;
-  font-size: clamp(1rem, 4vw, 5rem);
+  font-size: clamp(1.5rem, 2.5vw, 5rem);
   font-style: italic;
 }
 
