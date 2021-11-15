@@ -7,10 +7,13 @@ hamburger.addEventListener("click", function () {
 //main hamburger menu hide end//
 
 class clubFill {
-  constructor(klubnev, email, gps, tel, website, Klubvezeto) {
-    
+  constructor(clubExamplar) {
+    this.clubExamplar = clubExamplar;
+  }
+  putKlubnev() {
+    let findClubWrapper = document.querySelector(".wrapper-klubs");
   }
 }
 
-const findClubWrapper = document.querySelector(".wrapper-klubs");
-findClubWrapper.appendChild(document.createElement('div')).innerText = 'goal';
+const klubCheck = new clubFill();
+klubCheck.putKlubnev();
