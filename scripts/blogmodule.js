@@ -1,25 +1,22 @@
 export class CreateBlogInstance {
-    constructor(cikkNev, cikkNum) {
-        this.cikkNev = cikkNev;
-        this.cikkNum = cikkNum;
-    }
+  constructor(cikkNev, szoveg, cikkNum, cikkCimkep, cikkBentiKep) {
+    this.cikkNev = cikkNev;
+    this.cikkNum = cikkNum;
+    this.szoveg = szoveg;
+    this.cikkCimkep = cikkCimkep;
+    this.cikkBentiKep = cikkBentiKep;
+  }
 
-    addArticle() {
+  addArticle() {
+    const kontenerLastChild =
+      document.getElementsByClassName("hirek-kontener")[0];
+    kontenerLastChild.appendChild(document.createElement("article"));
+    const aricleI = kontenerLastChild.children;
+    console.log(aricleI[this.cikkNum]);
+    aricleI[this.cikkNum].innerHTML =
+      `<div class='hir-cime'><h2 id='hirCime'>${this.cikkNev}</h2><img src='${this.cikkCimkep}'></div>  <div class='hir-tartalom'><p class='szovegeles'>${this.szoveg}</p><img class='cikkBentiKep' src='${this.cikkBentiKep}'></div><div class='hir-hashtag'></div>`;
 
-    const addArticle = document.createElement('article');
-    const kontener = document.querySelector('.hirek-kontener');
-    kontener.appendChild(addArticle);
-    const addHirCimeDiv = document.createElement('div');
-    const articleLast = document.querySelector('.hirek-kontener').lastChild;
-    articleLast.appendChild(addHirCimeDiv).setAttribute('class' ,'hir-cime');
-    const hirCimDiv = articleLast.querySelector('.hir-cime');
-    const addHElement = document.createElement('h2');
-    hirCimDiv.appendChild(addHElement);
-    const addHCimFoto = document.createElement('img');
-    hirCimDiv.appendChild(addHCimFoto).setAttribute('src', './media/kemrseLogo.png');
-    document.querySelector("main > div > div > article:last-child > div > h2").textContent = this.cikkNev;
-    
-};
-
-
-};
+    // const hirCime = document.getElementById('hirCime');
+    // hirCime.textContent = this.cikkNev;
+  }
+}
