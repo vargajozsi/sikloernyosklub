@@ -658,15 +658,13 @@ th {
 /*the end of starthelyek specifed style elements*/
 /* The begin of hirek specificed elements */
 .hirek-kontener {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  }
 
 article {
-  max-width: max-content;
+  max-width: 100%;
   background-color: var(--attetszo-sotet);
   margin: 2rem;
   overflow: hidden;
@@ -702,7 +700,7 @@ article {
 .hir-cime img {
   max-width: 30%;
   height: auto;
-  margin-right: 2rem;
+  margin: 2rem;
 }
 
 .hir-tartalom {
@@ -716,12 +714,8 @@ article {
   color: var(--white-elements);
 }
 .szovegeles {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  align-items: flex-start;
   margin: 1rem;
-  text-align: left;
+  text-align: justify;
 }
 .szovegeles ol {
   margin-left: 5rem;
@@ -733,6 +727,11 @@ article {
   max-width: 60%;
   margin: 1em;
   font-size: clamp(1.5vw, 4vw, 2rem);
+}
+
+.cikkBentiKep {
+  margin-top: 2rem;
+  max-width: 30%;
 }
 
 .hir-hashtag {
