@@ -1,3 +1,5 @@
+//shorthand console.log
+const log = console.log.bind(document);
 // OpenWeather Info
 const openWeatherKey = 'c4a4e45630e841072bf9ef16bb89e412';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
@@ -22,5 +24,6 @@ if (response.ok) {
 }
 }
 
-console.log(getForecast().then(forecast => console.log(forecast)));
-console.log('knfnkdw kiwfenjewnf kfwehnk');
+log(getForecast().then(forecast => console.log(forecast)));
+const articleArray = document.getElementsByClassName('meteo-egyed');
+log(articleArray[0].childNodes);

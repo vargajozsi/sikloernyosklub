@@ -1,3 +1,5 @@
+//shorthand console.log
+const log = console.log.bind(document);
 
 //main hamburger menu hide begin//
 const hamburger = document.querySelector(".hamburger");
