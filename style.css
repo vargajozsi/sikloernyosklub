@@ -36,13 +36,14 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   font-family: "Source Sans Pro", sans-serif;
-
+  --linkelement-atlatszo: #f7bc3c69;
   --linkelement: #f7bb3c;
   --linkelement-dark: #a37b24;
-  --black-elements: black;
+  --black-elements:  #000;
   --white-elements: #fff;
   --hashtag-elements: #b9b9b9;
   --attetszo-sotet: rgba(0, 0, 0, 0.5);
+
 }
 
 body {
@@ -55,6 +56,13 @@ a {
   color: var(--linkelement);
 }
 
+ p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  color: var(--black-elements);
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
 header nav h2 {
   text-align: left;
   margin: 0;
@@ -194,38 +202,27 @@ menu > li:hover > a {
 h1 {
   font-family: "Great Vibes", cursive;
   font-weight: 100;
-  font-size: 3em;
+  font-size: 2.5rem;
   color: var(--white-elements);
-  font-stretch: 2em;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-stretch: semi-expanded;
+  background-color: var(--attetszo-sotet) ;
   text-align: center;
-  padding: 4rem 0.5rem;
-  letter-spacing: 0.1em;
-  /* animation-name: h1animation;
-  animation-duration: 1s;
-  animation-fill-mode: forwards; */
+  padding-top: 00.5rem;
+  letter-spacing: 0.2em;
+  text-shadow: -2px -2px 19px rgb(255, 255, 255), black 3px 3px;
+  
 }
-body h2 {
+h2 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 100;
-  font-size: 2em;
+  font-size: 1.8rem;
   color: var(--white-elements);
-  font-stretch: 2em;
+  font-stretch: expanded;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding: 1em;
+  padding: 0.5em;
 }
-@keyframes h1animation {
-  from {
-    font-size: 0px;
-    color: rgb(0, 0, 0);
-  }
-  to {
-    visibility: inherit;
-    font-size: 3em;
-    color: rgb(253, 253, 253);
-  }
-}
+
 h1::first-letter {
   font-size: 2em;
 }
@@ -678,7 +675,9 @@ article {
     var(--linkelement-dark),
     rgba(252, 252, 252, 0.1)
   );
+  border-radius: 0.5rem;
 }
+
 .hir-cime {
   display: flex;
   background-color: var(--white-elements);
@@ -780,6 +779,32 @@ article {
   border: var(--black-elements) solid 2rem;
 }
 /* The end of hirek specificed elements */
+/*-------the begin of meterologi specifed style elements*/
+.meteo-wrapper {
+  padding: 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  background: var(--white-elements);
+  gap: 3rem;
+}
+
+.starthely-korkep {
+  background: var(--attetszo-sotet);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+
+/*-------the end of meterologi specifed style elements*/
+
+
 
 /* end of main */
 /* Responsives for smaller devices*/
