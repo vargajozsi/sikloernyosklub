@@ -3,33 +3,32 @@
 const openWeatherKey = 'c4a4e45630e841072bf9ef16bb89e412';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const helyekMeteohoz = {
-    varos1: {
-        nev: 'Mosonmagyaróvár',
-        latitude: '47.872046',
-        longitude: '17.270229'
-        },
-    varos2: {
-        nev: 'Vértesszőlős',
-        latitude: '47.872046',
-        longitude: '17.270229'
-        },
-    varos3: {
-        nev: 'Diszel',
-        latitude: '47.872046',
-        longitude: '17.270229'
-        },
-    varos4: {
-            nev: 'Diszel',
-            latitude: '47.872046',
-            longitude: '17.270229'
-        }
-};
-
-for (let varos in helyekMeteohoz) {
-
-//async function data request from openweathermap.org
+    varos0: [
+        0,
+        'Mosonmagyaróvár',
+        '47.872046',
+        '17.270229'
+        ],
+    varos1: [1,
+        'Mosonmagyaróvár',
+        '47.872046',
+        '17.270229'],
+    varos2: 
+        [2,
+            'Mosonmagyaróvár',
+            '47.872046',
+            '17.270229'],
+    varos3: 
+        [3,
+            'Mosonmagyaróvár',
+            '47.872046',
+            '17.270229']
+        };
+let indexVaros = 0;
 
 
+
+    //async function data request from openweathermap.org
 const getForecast = async () => {
     //hőmérséklet városnév alapján
     //const urlToFetch = `${weatherUrl}?q=Mosonmagyarovar&units=metric&lang=hu&APPID=${openWeatherKey}`;
@@ -48,8 +47,9 @@ if (response.ok) {
   console.log(error.message);
 }
 }
+
 //call datarequest function
- getForecast().then(forecast => {
+getForecast().then(forecast => {
     renderForecast(forecast);
 });
 
@@ -57,28 +57,27 @@ if (response.ok) {
 const renderForecast = (forecast) => {
 const articleArray = document.getElementsByClassName('meteo-egyed');
 let addP = document.createElement('p');
-articleArray[0].append(addP);
-articleArray[0].lastChild.textContent = `${helyekMeteohoz.varos1.nev}`;
+articleArray[indexVaros].append(addP);
+articleArray[indexVaros].lastChild.textContent = `${helyekMeteohoz.varos0[1]}`;
 addP = document.createElement('p');
-articleArray[0].append(addP);
-articleArray[0].lastChild.textContent = `A hőmérséket: ${forecast.main.temp} Celsius`;
+articleArray[indexVaros].append(addP);
+articleArray[indexVaros].lastChild.textContent = `A hőmérséket: ${forecast.main.temp.toFixed(1)} Celsius`;
 addP = document.createElement('p');
-articleArray[0].append(addP);
-articleArray[0].lastChild.textContent = `Felhőzet: ${forecast.weather[0].description}`;
+articleArray[indexVaros].append(addP);
+articleArray[indexVaros].lastChild.textContent = `Felhőzet: ${forecast.weather[0].description}`;
 addP = document.createElement('img');
-articleArray[0].append(addP);
-articleArray[0].lastChild.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
+articleArray[indexVaros].append(addP);
+articleArray[indexVaros].lastChild.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
 addP = document.createElement('p');
-articleArray[0].append(addP);
-articleArray[0].lastChild.textContent = `Szélsebesség: ${forecast.wind.speed} m/s (${forecast.wind.speed* 3.6} km/h)`;
+articleArray[indexVaros].append(addP);
+articleArray[indexVaros].lastChild.textContent = `Szélsebesség: ${forecast.wind.speed.toFixed(1)} m/s (${Math.round(forecast.wind.speed) * 3.6} km/h)`;
 addP = document.createElement('p');
-articleArray[0].append(addP);
-articleArray[0].lastChild.textContent = `Széllökés: ${forecast.wind.gust} m/s   (${forecast.wind.gust* 3.6} km/h)`;
+articleArray[indexVaros].append(addP);
+articleArray[indexVaros].lastChild.textContent = `Széllökés: ${forecast.wind.gust.toFixed(1)} m/s   (${Math.round(forecast.wind.gust)* 3.6} km/h)`;
 addP = document.createElement('p');
-articleArray[0].append(addP);
-articleArray[0].lastChild.textContent = `Szélirány fokban: ${forecast.wind.deg}`;
+articleArray[indexVaros].append(addP);
+articleArray[indexVaros].lastChild.textContent = `Szélirány fokban: ${forecast.wind.deg}`;
 addP = document.createElement('span');
-articleArray[0].lastChild.append(addP);
-articleArray[0].children[7].lastChild.style.transform = `rotate(${ forecast.wind.deg + 45}deg)` ;
-}
+articleArray[indexVaros].lastChild.append(addP);
+articleArray[indexVaros].children[7].lastChild.style.transform = `rotate(${ forecast.wind.deg + 45}deg)` ;
 }
