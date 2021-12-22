@@ -799,6 +799,22 @@ article {
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   grid-template-rows: auto;
   gap: 1rem;
+  
+}
+
+.meteo-egyed p{
+  color: var(--white-elements);
+  padding: 0rem 2rem;
+}
+
+article p span {
+  background: rgb(0, 0, 0);
+  border: solid #f7bb3c;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 0.8rem;
+  /*transform: rotate(-135deg);*/
 }
 
 
