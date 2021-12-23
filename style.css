@@ -781,9 +781,9 @@ article {
 /* The end of hirek specificed elements */
 /*-------the begin of meterologi specifed style elements*/
 .meteo-wrapper {
-  padding: 2rem 5rem;
+  /* padding: 2rem 5rem; */
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto;
   justify-content: center;
   align-content: center;
@@ -794,12 +794,15 @@ article {
 }
 
 .starthely-korkep {
+  width: 100%;
   background: var(--attetszo-sotet);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: auto;
   gap: 1rem;
-  
+  align-items: baseline;
+  align-content: center;
+  justify-content: center;
 }
 
 .meteo-egyed p{
