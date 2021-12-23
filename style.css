@@ -728,7 +728,12 @@ article {
   font-size: clamp(1.5rem, 1.5vw, 2rem);
 }
 
+.szovegeles p, {
+  color: var(--white-elements);
+}
+
 .hir-tartalom p {
+color: var(--white-elements);
   max-width: 60%;
   margin: 1em;
   font-size: clamp(1.5vw, 4vw, 2rem);

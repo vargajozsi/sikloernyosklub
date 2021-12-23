@@ -5,40 +5,42 @@ const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const helyekMeteohoz = {
     varos0: [
         0,
-        'Mosonmagyaróvár', //nev
-        '47.872046', //long
-        '17.270229', //lat
+        'Szársomlyó', //nev
+        '45.855330', //long
+        '18.410290', //lat
         101 //stationId holfuy
     ],
     varos1: [1,
-        'Mosonmagyaróvár', //nev
+        'Csákberény', //nev
         '47.872046', //long
         '17.270229', //lat
         101 //stationId holfuy
     ],
     varos2:
         [2,
-            'Mosonmagyaróvár', //nev
-            '47.872046', //long
-            '17.270229', //lat
+            'Billegpuszta', //nev
+            '47.706532', //long
+            '18.223585', //lat
             101 //stationId holfuy
         ],
     varos3:
         [3,
-            'Mosonmagyaróvár', //nev
-            '47.872046', //long
-            '17.270229', //lat
+            'Csobánc', //nev
+            '46.871450', //long
+            '17.503620', //lat
             101 //stationId holfuy
         ]
 };
-let indexVaros;
+let lat, long, indexVaros, varosPeldany;
+
+
 
 
 
 //async function data request from openweathermap.org
-const getForecastOpenW = async () => {
+const getForecastOpenW = async (latitude, longitude) => {
     //hőmérséklet koordináták alapján
-    const urlToFetch = `${weatherUrl}?lat=47.872046&lon=17.270229&units=metric&lang=hu&APPID=${openWeatherKey}`;
+    const urlToFetch = `${weatherUrl}?lat=${latitude}&lon=${longitude}&units=metric&lang=hu&APPID=${openWeatherKey}`;
 
     try {
         const response = await fetch(urlToFetch);
@@ -56,11 +58,11 @@ const getForecastOpenW = async () => {
 
 
 //render weatherdatas
-const renderForecast = (forecast, indexVaros) => {
+const renderForecast = (forecast, indexVaros, varosPeldanynev) => {
     const articleArray = document.getElementsByClassName('meteo-egyed');
     let addP = document.createElement('p');
     articleArray[indexVaros].append(addP);
-    articleArray[indexVaros].lastChild.textContent = `${helyekMeteohoz.varos0[1]}`;
+    articleArray[indexVaros].lastChild.textContent = `${varosPeldanynev}`;
     addP = document.createElement('p');
     articleArray[indexVaros].append(addP);
     articleArray[indexVaros].lastChild.textContent = `A hőmérséket: ${forecast.main.temp.toFixed(1)} Celsius`;
@@ -75,7 +77,7 @@ const renderForecast = (forecast, indexVaros) => {
     articleArray[indexVaros].lastChild.textContent = `Szélsebesség: ${forecast.wind.speed.toFixed(1)} m/s (${Math.round(forecast.wind.speed) * 3.6} km/h)`;
     addP = document.createElement('p');
     articleArray[indexVaros].append(addP);
-    articleArray[indexVaros].lastChild.textContent = `Széllökés: ${forecast.wind.gust.toFixed(1)} m/s   (${Math.round(forecast.wind.gust) * 3.6} km/h)`;
+    articleArray[indexVaros].lastChild.textContent = `Széllökés: ${forecast.wind.gust} m/s   (${Math.round(forecast.wind.gust) * 3.6} km/h)`;
     addP = document.createElement('p');
     articleArray[indexVaros].append(addP);
     articleArray[indexVaros].lastChild.textContent = `Szélirány fokban: ${forecast.wind.deg}`;
@@ -86,13 +88,39 @@ const renderForecast = (forecast, indexVaros) => {
 
 
 //call datarequest function
-getForecastOpenW().then(forecast => {
+
+//SZÁRSOMLYÓ
+lat = helyekMeteohoz.varos0[2];
+long = helyekMeteohoz.varos0[3];
+getForecastOpenW(lat, long).then(forecast => {
     indexVaros = 0;
-    renderForecast(forecast, indexVaros);
+    varosPeldany = helyekMeteohoz.varos0[1];
+    renderForecast(forecast, indexVaros, varosPeldany);
 });
 
-getForecastOpenW().then(forecast => {
+//CSÁKBERÉNY
+lat = helyekMeteohoz.varos1[2];
+long = helyekMeteohoz.varos1[3];
+getForecastOpenW(lat, long).then(forecast => {
+    varosPeldany = helyekMeteohoz.varos1[1];
     indexVaros = 1;
-    renderForecast(forecast, indexVaros);
+    renderForecast(forecast, indexVaros, varosPeldany);
 });
 
+//BILLEGPUSZTA
+lat = helyekMeteohoz.varos2[2];
+long = helyekMeteohoz.varos2[3];
+getForecastOpenW(lat, long).then(forecast => {
+    varosPeldany = helyekMeteohoz.varos2[1];
+    indexVaros = 2;
+    renderForecast(forecast, indexVaros, varosPeldany);
+});
+
+//CSOBÁNC
+lat = helyekMeteohoz.varos3[2];
+long = helyekMeteohoz.varos3[3];
+getForecastOpenW(lat, long).then(forecast => {
+    varosPeldany = helyekMeteohoz.varos3[1];
+    indexVaros = 3;
+    renderForecast(forecast, indexVaros, varosPeldany);
+});
