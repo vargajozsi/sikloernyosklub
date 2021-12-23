@@ -2,7 +2,6 @@
 // OpenWeather Info
 const openWeatherKey = 'c4a4e45630e841072bf9ef16bb89e412';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
-const holfuyUrl = 'http://api.holfuy.com/live/?'
 const helyekMeteohoz = {
     varos0: [
         0,
@@ -32,7 +31,7 @@ const helyekMeteohoz = {
             101 //stationId holfuy
         ]
 };
-let indexVaros = 0;
+let indexVaros;
 
 
 
@@ -53,32 +52,11 @@ const getForecastOpenW = async () => {
     }
 }
 
-//call datarequest function
-getForecastOpenW().then(forecast => {
-    renderForecast(forecast);
-});
 
-//async function data request from holfuy.com
-const getForecastHolfuy = async () => {
-
-    //hőmérséklet koordináták alapján
-    const urlToFetch = `${weatherUrl}?lat=47.872046&lon=17.270229&units=metric&lang=hu&APPID=${openWeatherKey}`;
-
-    try {
-        const response = await fetch(urlToFetch);
-        if (response.ok) {
-            const jsonResponse = await response.json();
-            log(jsonResponse);
-            return jsonResponse;
-        } else throw new Error('something went wrong...');
-    } catch (error) {
-        console.log(error.message);
-    }
-}
 
 
 //render weatherdatas
-const renderForecast = (forecast) => {
+const renderForecast = (forecast, indexVaros) => {
     const articleArray = document.getElementsByClassName('meteo-egyed');
     let addP = document.createElement('p');
     articleArray[indexVaros].append(addP);
@@ -105,3 +83,16 @@ const renderForecast = (forecast) => {
     articleArray[indexVaros].lastChild.append(addP);
     articleArray[indexVaros].children[7].lastChild.style.transform = `rotate(${forecast.wind.deg + 45}deg)`;
 }
+
+
+//call datarequest function
+getForecastOpenW().then(forecast => {
+    indexVaros = 0;
+    renderForecast(forecast, indexVaros);
+});
+
+getForecastOpenW().then(forecast => {
+    indexVaros = 1;
+    renderForecast(forecast, indexVaros);
+});
+
