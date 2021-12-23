@@ -2,37 +2,42 @@
 // OpenWeather Info
 const openWeatherKey = 'c4a4e45630e841072bf9ef16bb89e412';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
+const holfuyUrl = 'http://api.holfuy.com/live/?'
 const helyekMeteohoz = {
     varos0: [
         0,
-        'Mosonmagyaróvár',
-        '47.872046',
-        '17.270229'
+        'Mosonmagyaróvár', //nev
+        '47.872046', //long
+        '17.270229', //lat
+        101 //stationId holfuy
     ],
     varos1: [1,
-        'Mosonmagyaróvár',
-        '47.872046',
-        '17.270229'],
+        'Mosonmagyaróvár', //nev
+        '47.872046', //long
+        '17.270229', //lat
+        101 //stationId holfuy
+    ],
     varos2:
         [2,
-            'Mosonmagyaróvár',
-            '47.872046',
-            '17.270229'],
+            'Mosonmagyaróvár', //nev
+            '47.872046', //long
+            '17.270229', //lat
+            101 //stationId holfuy
+        ],
     varos3:
         [3,
-            'Mosonmagyaróvár',
-            '47.872046',
-            '17.270229']
+            'Mosonmagyaróvár', //nev
+            '47.872046', //long
+            '17.270229', //lat
+            101 //stationId holfuy
+        ]
 };
 let indexVaros = 0;
 
 
 
 //async function data request from openweathermap.org
-const getForecast = async () => {
-    //hőmérséklet városnév alapján
-    //const urlToFetch = `${weatherUrl}?q=Mosonmagyarovar&units=metric&lang=hu&APPID=${openWeatherKey}`;
-
+const getForecastOpenW = async () => {
     //hőmérséklet koordináták alapján
     const urlToFetch = `${weatherUrl}?lat=47.872046&lon=17.270229&units=metric&lang=hu&APPID=${openWeatherKey}`;
 
@@ -49,9 +54,28 @@ const getForecast = async () => {
 }
 
 //call datarequest function
-getForecast().then(forecast => {
+getForecastOpenW().then(forecast => {
     renderForecast(forecast);
 });
+
+//async function data request from holfuy.com
+const getForecastHolfuy = async () => {
+
+    //hőmérséklet koordináták alapján
+    const urlToFetch = `${weatherUrl}?lat=47.872046&lon=17.270229&units=metric&lang=hu&APPID=${openWeatherKey}`;
+
+    try {
+        const response = await fetch(urlToFetch);
+        if (response.ok) {
+            const jsonResponse = await response.json();
+            log(jsonResponse);
+            return jsonResponse;
+        } else throw new Error('something went wrong...');
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 
 //render weatherdatas
 const renderForecast = (forecast) => {
