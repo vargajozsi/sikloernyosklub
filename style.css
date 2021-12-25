@@ -663,7 +663,7 @@ th {
 }
 
 article {
-  max-width: max-content;
+  /* max-width: max-content; */
   background-color: var(--attetszo-sotet);
   margin: 2rem;
   overflow: hidden;
@@ -786,7 +786,6 @@ color: var(--white-elements);
 /* The end of hirek specificed elements */
 /*-------the begin of meterologi specifed style elements*/
 .meteo-wrapper {
-  /* padding: 2rem 5rem; */
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -800,14 +799,20 @@ color: var(--white-elements);
 
 .starthely-korkep {
   width: 100%;
+  padding: 0 2rem;
   background: var(--attetszo-sotet);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: auto;
-  gap: 1rem;
+  gap: 1rem ; 
   align-items: baseline;
+  justify-items: center;
   align-content: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.meteo-egyed {
+  width: 100%;
 }
 
 .meteo-egyed p{
@@ -1070,4 +1075,19 @@ article p span {
   }
 
   /*the end of hirek specifed style elements for under600*/
+
+
+/*-------the begin of meterologi specifed style elements for under600**/
+.starthely-korkep {
+  grid-template-columns: 100vw;
+  align-items: baseline;
+  min-width: 100vw;
+}
+
+
+/*-------the end of meterologi specifed style elements for under600**/
+
+
+
+
 }
