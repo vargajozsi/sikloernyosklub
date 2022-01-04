@@ -810,7 +810,7 @@ color: var(--white-elements);
   justify-content: space-around;
 }
 
-.meteo-egyed, .meteo-linkek, .iframek {
+.meteo-egyed, .meteo-linkek, .iframek, article {
   width: 100%;
   background: var(--attetszo-sotet);
 }
@@ -830,6 +830,12 @@ article p span {
   /*transform: rotate(-135deg);*/
 }
 
+.link-egyed a {
+  padding: 3rem;
+  line-height: 3rem;
+  font-size: calc(0.5rem + 1vw);
+
+}
 
 
 
