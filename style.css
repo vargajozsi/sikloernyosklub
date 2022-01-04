@@ -793,11 +793,10 @@ color: var(--white-elements);
   align-content: center;
   justify-items: center;
   align-items: center;
-  background: var(--white-elements);
   gap: 3rem;
 }
 
-.starthely-korkep, .meteo-linkek {
+.starthely-korkep, .meteo-linkek, .iframek {
   width: 100%;
   padding: 0 2rem;
   background: var(--attetszo-sotet);
@@ -811,8 +810,9 @@ color: var(--white-elements);
   justify-content: space-around;
 }
 
-.meteo-egyed, .meteo-linkek {
+.meteo-egyed, .meteo-linkek, .iframek {
   width: 100%;
+  background: var(--attetszo-sotet);
 }
 
 .meteo-egyed p{
