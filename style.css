@@ -797,7 +797,7 @@ color: var(--white-elements);
 }
 
 .starthely-korkep, .meteo-linkek, .iframek {
-  width: 100%;
+  width: 100vw;
   padding: 0 2rem;
   background: var(--attetszo-sotet);
   display: grid;
@@ -829,15 +829,25 @@ article p span {
   padding: 0.8rem;
   /*transform: rotate(-135deg);*/
 }
-
-.link-egyed a {
-  padding: 3rem;
-  line-height: 3rem;
-  font-size: calc(0.5rem + 1vw);
-
+.link-egyed ul {
+  padding: 2rem;
+  list-style: none;
 }
 
+.link-egyed li {
+  padding: 1rem 0rem;
 
+}
+.link-egyed a {
+  line-height: 2rem;
+  font-size: calc(1rem + 1vw);
+}
+
+.link-egyed a:hover {
+  font-size: calc(1.2rem + 1vw);
+  color: var(--linkelement-dark);
+  text-decoration: underline;
+}
 
 /*-------the end of meterologi specifed style elements*/
 
